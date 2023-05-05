@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		03FB63002A056A5E000E94A6 /* OvenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB62FF2A056A5E000E94A6 /* OvenApp.swift */; };
-		03FB63022A056A5E000E94A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63012A056A5E000E94A6 /* ContentView.swift */; };
+		03FB63022A056A5E000E94A6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63012A056A5E000E94A6 /* HomeView.swift */; };
 		03FB63042A056A5F000E94A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03FB63032A056A5F000E94A6 /* Assets.xcassets */; };
 		03FB63072A056A5F000E94A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03FB63062A056A5F000E94A6 /* Preview Assets.xcassets */; };
 		03FB63112A056A5F000E94A6 /* OvenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63102A056A5F000E94A6 /* OvenTests.swift */; };
 		03FB631B2A056A5F000E94A6 /* OvenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB631A2A056A5F000E94A6 /* OvenUITests.swift */; };
 		03FB631D2A056A5F000E94A6 /* OvenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB631C2A056A5F000E94A6 /* OvenUITestsLaunchTests.swift */; };
+		03FB632A2A05C94D000E94A6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63292A05C94D000E94A6 /* SplashView.swift */; };
+		03FB632C2A05C956000E94A6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB632B2A05C956000E94A6 /* OnboardingView.swift */; };
+		03FB632E2A05C993000E94A6 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB632D2A05C993000E94A6 /* LocationView.swift */; };
+		03FB63302A05C99B000E94A6 /* InhaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB632F2A05C99B000E94A6 /* InhaleView.swift */; };
+		03FB63322A05C9A4000E94A6 /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63312A05C9A4000E94A6 /* CompleteView.swift */; };
+		03FB63342A05C9BF000E94A6 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63332A05C9BF000E94A6 /* TimerView.swift */; };
+		03FB63362A05C9CA000E94A6 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63352A05C9CA000E94A6 /* CompassView.swift */; };
+		03FB633A2A05C9F3000E94A6 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63392A05C9F3000E94A6 /* StepView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,7 @@
 /* Begin PBXFileReference section */
 		03FB62FC2A056A5E000E94A6 /* Oven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03FB62FF2A056A5E000E94A6 /* OvenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvenApp.swift; sourceTree = "<group>"; };
-		03FB63012A056A5E000E94A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		03FB63012A056A5E000E94A6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		03FB63032A056A5F000E94A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03FB63062A056A5F000E94A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03FB630C2A056A5F000E94A6 /* OvenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OvenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +52,14 @@
 		03FB63162A056A5F000E94A6 /* OvenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OvenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03FB631A2A056A5F000E94A6 /* OvenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvenUITests.swift; sourceTree = "<group>"; };
 		03FB631C2A056A5F000E94A6 /* OvenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		03FB63292A05C94D000E94A6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		03FB632B2A05C956000E94A6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		03FB632D2A05C993000E94A6 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		03FB632F2A05C99B000E94A6 /* InhaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InhaleView.swift; sourceTree = "<group>"; };
+		03FB63312A05C9A4000E94A6 /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
+		03FB63332A05C9BF000E94A6 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		03FB63352A05C9CA000E94A6 /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
+		03FB63392A05C9F3000E94A6 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +111,15 @@
 			isa = PBXGroup;
 			children = (
 				03FB62FF2A056A5E000E94A6 /* OvenApp.swift */,
-				03FB63012A056A5E000E94A6 /* ContentView.swift */,
+				03FB63292A05C94D000E94A6 /* SplashView.swift */,
+				03FB632B2A05C956000E94A6 /* OnboardingView.swift */,
+				03FB63012A056A5E000E94A6 /* HomeView.swift */,
+				03FB632D2A05C993000E94A6 /* LocationView.swift */,
+				03FB632F2A05C99B000E94A6 /* InhaleView.swift */,
+				03FB63312A05C9A4000E94A6 /* CompleteView.swift */,
+				03FB63332A05C9BF000E94A6 /* TimerView.swift */,
+				03FB63352A05C9CA000E94A6 /* CompassView.swift */,
+				03FB63392A05C9F3000E94A6 /* StepView.swift */,
 				03FB63032A056A5F000E94A6 /* Assets.xcassets */,
 				03FB63052A056A5F000E94A6 /* Preview Content */,
 			);
@@ -257,8 +281,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03FB63022A056A5E000E94A6 /* ContentView.swift in Sources */,
+				03FB63022A056A5E000E94A6 /* HomeView.swift in Sources */,
+				03FB63322A05C9A4000E94A6 /* CompleteView.swift in Sources */,
+				03FB632C2A05C956000E94A6 /* OnboardingView.swift in Sources */,
+				03FB632E2A05C993000E94A6 /* LocationView.swift in Sources */,
+				03FB63302A05C99B000E94A6 /* InhaleView.swift in Sources */,
 				03FB63002A056A5E000E94A6 /* OvenApp.swift in Sources */,
+				03FB63362A05C9CA000E94A6 /* CompassView.swift in Sources */,
+				03FB63342A05C9BF000E94A6 /* TimerView.swift in Sources */,
+				03FB633A2A05C9F3000E94A6 /* StepView.swift in Sources */,
+				03FB632A2A05C94D000E94A6 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

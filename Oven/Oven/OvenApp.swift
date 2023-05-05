@@ -11,7 +11,10 @@ import SwiftUI
 struct OvenApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                SplashView()
+            }
+            .navigationViewStyle(.stack)
         }
     }
 }
