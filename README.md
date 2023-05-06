@@ -13,22 +13,23 @@
 ### Fork를 이용해서 협업하기
 
 1. 원본 레포를 fork하여 내 레포에 생성합니다.
-2. 원하는 디렉토리에 git을 초기화 시켜줍니다.
+2. git clone을 통해 원하는 디렉토리에 파일을 가져와줍니다. 
 
 ```
-git init
+git clone https://github.com/{본인 아이디}/MC2-TEAM3-TechNoValley
 ```
 
-3. 원본(메인) 레포를 upstream으로 remote해줍니다.
+3. remote 상태를 확인해 봤을 때, 아래의 창이 뜨면 origin과 upstream이 제대로 등록된 것입니다. 
 
 ```
-git remote add upstream https://github.com/DeveloperAcademy-POSTECH/MC2-TEAM3-TechNoValley
-```
+git remote -v
 
-4. 로컬(나의) 레포를 origin으로 remote해줍니다.
-
-```
-git remote add origin https://github.com/{본인 아이디}/MC2-TEAM3-TechNoValley
+/*
+origin	https://github.com/ge-um/MC2-TEAM3-TechNoValley/ (fetch)
+origin	https://github.com/ge-um/MC2-TEAM3-TechNoValley/ (push)
+upstream	https://github.com/DeveloperAcademy-POSTECH/MC2-TEAM3-TechNoValley (fetch)
+upstream	https://github.com/DeveloperAcademy-POSTECH/MC2-TEAM3-TechNoValley (push)
+*/
 ```
 
 ### upstream에서 pull 받아오고, origin으로 push 날려서 PR 진행하기
@@ -41,8 +42,8 @@ git remote add origin https://github.com/{본인 아이디}/MC2-TEAM3-TechNoVall
 1. 로컬에 브랜치를 생성하고, 해당 브랜치로 이동한 후 작업합니다. 
 
 ```
-git checkout -b {브랜치명}
-ex) git checkout -b HomeView
+git switch -b {브랜치명}
+ex) git switch -b HomeView
 ```
 
 2. 작업이 끝난 뒤, add와 commit을 진행합니다.
