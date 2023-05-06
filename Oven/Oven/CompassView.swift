@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct CompassView: View {
+    @ObservedObject var compassHeading = CompassHeading()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("\(compassHeading.degrees)")
     }
 }
 
