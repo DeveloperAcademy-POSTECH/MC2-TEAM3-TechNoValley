@@ -9,9 +9,10 @@ import SwiftUI
 
 struct CompassView: View {
     @ObservedObject var compassHeading = CompassHeading()
+    @State private var randomAngle = Double.random(in: 0...360)
 
     var body: some View {
-        Text("\(compassHeading.degrees)")
+            Text("\(compassHeading.degrees - randomAngle)")
     }
 }
 
