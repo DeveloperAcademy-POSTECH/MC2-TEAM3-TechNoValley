@@ -99,6 +99,11 @@ git switch develop(main)
 * Added --> Add
 * Modified --> Modify
 ```
+## Coding Convention
+
+- 아카데미 내부의 코딩 컨벤션 스타일을 참고해 주세요. 
+
+https://github.com/DeveloperAcademy-POSTECH/swift-style-guide
 
 ## Member
 
