@@ -22,6 +22,7 @@
 		03FB63342A05C9BF000E94A6 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63332A05C9BF000E94A6 /* TimerView.swift */; };
 		03FB63362A05C9CA000E94A6 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63352A05C9CA000E94A6 /* CompassView.swift */; };
 		03FB633A2A05C9F3000E94A6 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63392A05C9F3000E94A6 /* StepView.swift */; };
+		2F9E3AF52A093CDF00468F9A /* OnboardingPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E3AF42A093CDF00468F9A /* OnboardingPermissionView.swift */; };
 		C229454B2A08D9DF0006C65B /* OnboardingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C229454A2A08D9DF0006C65B /* OnboardingTabView.swift */; };
 		C229454D2A08DA680006C65B /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C229454C2A08DA680006C65B /* OnboardingPageView.swift */; };
 		C229454F2A08DAC70006C65B /* OnboardingLastPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C229454E2A08DAC70006C65B /* OnboardingLastPageView.swift */; };
@@ -63,6 +64,7 @@
 		03FB63332A05C9BF000E94A6 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		03FB63352A05C9CA000E94A6 /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
 		03FB63392A05C9F3000E94A6 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
+		2F9E3AF42A093CDF00468F9A /* OnboardingPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPermissionView.swift; sourceTree = "<group>"; };
 		C229454A2A08D9DF0006C65B /* OnboardingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabView.swift; sourceTree = "<group>"; };
 		C229454C2A08DA680006C65B /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		C229454E2A08DAC70006C65B /* OnboardingLastPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLastPageView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				03FB632B2A05C956000E94A6 /* OnboardingView.swift */,
 				C229454C2A08DA680006C65B /* OnboardingPageView.swift */,
 				C229454E2A08DAC70006C65B /* OnboardingLastPageView.swift */,
+				2F9E3AF42A093CDF00468F9A /* OnboardingPermissionView.swift */,
 				C229454A2A08D9DF0006C65B /* OnboardingTabView.swift */,
 				03FB63012A056A5E000E94A6 /* HomeView.swift */,
 				03FB632D2A05C993000E94A6 /* LocationView.swift */,
@@ -298,6 +301,7 @@
 				03FB63302A05C99B000E94A6 /* InhaleView.swift in Sources */,
 				C229454B2A08D9DF0006C65B /* OnboardingTabView.swift in Sources */,
 				03FB63002A056A5E000E94A6 /* OvenApp.swift in Sources */,
+				2F9E3AF52A093CDF00468F9A /* OnboardingPermissionView.swift in Sources */,
 				03FB63362A05C9CA000E94A6 /* CompassView.swift in Sources */,
 				03FB63342A05C9BF000E94A6 /* TimerView.swift in Sources */,
 				C229454D2A08DA680006C65B /* OnboardingPageView.swift in Sources */,
@@ -464,6 +468,7 @@
 				DEVELOPMENT_TEAM = HLS34A9223;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "식히기 위해 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -493,6 +498,7 @@
 				DEVELOPMENT_TEAM = HLS34A9223;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "식히기 위해 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
