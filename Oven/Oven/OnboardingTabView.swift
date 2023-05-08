@@ -27,10 +27,10 @@ struct OnboardingTabView: View {
                 )
 
                 // 페이지 3
-                OnboardingPageView(
+                OnboardingPermissionView(
                     imageName: "face.smiling.inverse",
-                    title: "온보딩3",
-                    subtitle: "온보딩3 화면이에요."
+                    title: "위치 권한 동의",
+                    subtitle: "식히기 위해 위치 권한 동의가 필요합니다."
                 )
 
                 // 페이지 4: 온보딩 완료
