@@ -11,20 +11,23 @@ struct OnboardingPageView: View {
     let imageName: String
     let title: String
     let subtitle: String
-    
+
     var body: some View {
-        VStack {
-            Image(systemName: imageName)
-                .font(.system(size: 100))
-                .padding()
-            Text(title)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding()
-            Text(subtitle)
-                .font(.title2)
+        GeometryReader { geometry in
+            VStack (alignment: .leading) {
+                Text(title)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.bottom)
+                Text(subtitle)
+                    .font(.title2)
+                    .padding(.bottom)
+                Image(systemName: imageName)
+                    .font(.system(size: 100))
+            }
+            .frame(width: geometry.size.width / 1)
+            .padding(.vertical)
         }
-        
     }
 }
 

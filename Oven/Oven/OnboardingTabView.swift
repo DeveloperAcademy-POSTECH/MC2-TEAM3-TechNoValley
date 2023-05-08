@@ -15,8 +15,8 @@ struct OnboardingTabView: View {
                 // 페이지 1
                 OnboardingPageView(
                     imageName: "person.3.fill",
-                    title: "온보딩1",
-                    subtitle: "온보딩1 화면이에요."
+                    title: "환영합니다.",
+                    subtitle: "Ov5n은 언제나 열정적인 당신을 위해\n일상 속 작은 휴식을 선물합니다. "
                 )
 
                 // 페이지 2
