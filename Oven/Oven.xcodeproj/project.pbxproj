@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0338D64E2A08ED3C0009D259 /* CompassHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0338D64D2A08ED3C0009D259 /* CompassHeading.swift */; };
 		03FB63002A056A5E000E94A6 /* OvenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB62FF2A056A5E000E94A6 /* OvenApp.swift */; };
 		03FB63022A056A5E000E94A6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63012A056A5E000E94A6 /* HomeView.swift */; };
 		03FB63042A056A5F000E94A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03FB63032A056A5F000E94A6 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0338D64D2A08ED3C0009D259 /* CompassHeading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassHeading.swift; sourceTree = "<group>"; };
 		03FB62FC2A056A5E000E94A6 /* Oven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03FB62FF2A056A5E000E94A6 /* OvenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvenApp.swift; sourceTree = "<group>"; };
 		03FB63012A056A5E000E94A6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				03FB63012A056A5E000E94A6 /* HomeView.swift */,
 				03FB632D2A05C993000E94A6 /* LocationView.swift */,
 				03FB632F2A05C99B000E94A6 /* InhaleView.swift */,
+				0338D64D2A08ED3C0009D259 /* CompassHeading.swift */,
 				03FB63312A05C9A4000E94A6 /* CompleteView.swift */,
 				03FB63332A05C9BF000E94A6 /* TimerView.swift */,
 				03FB63352A05C9CA000E94A6 /* CompassView.swift */,
@@ -284,6 +287,7 @@
 				03FB63022A056A5E000E94A6 /* HomeView.swift in Sources */,
 				03FB63322A05C9A4000E94A6 /* CompleteView.swift in Sources */,
 				03FB632C2A05C956000E94A6 /* OnboardingView.swift in Sources */,
+				0338D64E2A08ED3C0009D259 /* CompassHeading.swift in Sources */,
 				03FB632E2A05C993000E94A6 /* LocationView.swift in Sources */,
 				03FB63302A05C99B000E94A6 /* InhaleView.swift in Sources */,
 				03FB63002A056A5E000E94A6 /* OvenApp.swift in Sources */,
