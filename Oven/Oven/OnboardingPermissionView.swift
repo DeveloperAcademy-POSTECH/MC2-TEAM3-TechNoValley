@@ -11,41 +11,37 @@ import CoreLocation
 struct OnboardingPermissionView: View {
     @State private var location: CLLocation?
 
+    let imageName: String
     let title: String
     let subtitle: String
-
+    
     var body: some View {
-        let locationManager = CLLocationManager()
-        
         GeometryReader { geometry in
-            VStack {
-                VStack {
-                    Text(title)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .padding(.bottom)
-                    Text(subtitle)
-                        .font(.title2)
-                        .padding(.bottom)
-                        .multilineTextAlignment(.center)
-                }
-                    .padding(.vertical)
-                VStack {
-                    Button {
-                        locationManager.requestWhenInUseAuthorization()
-                    } label: {
-                        Text("위치 권한 허용하기")
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .frame(width: 200, height: 50)
-                            .background(Color(red: 1.00, green: 0.55, blue: 0.00))
-                            .cornerRadius(6)
-                    }
-                }
-                    .frame(width: geometry.size.width / 1)
+            VStack (alignment: .leading) {
+                Text(title)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
                     .padding(.bottom)
+                VStack {
+                    Button("위치 권한 허용하기") {
+                        let locationManager = CLLocationManager()
+                        locationManager.requestWhenInUseAuthorization()
+                        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                        locationManager.distanceFilter = kCLDistanceFilterNone
+                        locationManager.startUpdatingLocation()
+                        location = locationManager.location
+                    }
+                    .padding()
+                    Text("Latitude: \(location?.coordinate.latitude ?? 0), Longitude: \(location?.coordinate.longitude ?? 0)")
+                }
+                Text(subtitle)
+                    .font(.title2)
+                    .padding(.bottom)
+                Image(systemName: imageName)
+                    .font(.system(size: 100))
             }
-                .padding(.vertical)
+            .frame(width: geometry.size.width / 1)
+            .padding(.vertical)
         }
     }
 }
