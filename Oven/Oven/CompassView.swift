@@ -34,6 +34,7 @@ struct CompassView: View {
                         if Int(xCoordinate) == Int(geometry.size.width/2) {
                             isMiddle.toggle()
                             HapticManager.instance.notification(type: .success)
+                            HapticManager.instance.impact(style: .heavy)
                             startTimer()
                         }
                     }
