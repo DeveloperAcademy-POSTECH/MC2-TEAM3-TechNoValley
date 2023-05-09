@@ -11,37 +11,44 @@ import CoreLocation
 struct OnboardingPermissionView: View {
     @State private var location: CLLocation?
 
-    let imageName: String
     let title: String
     let subtitle: String
-    
+
     var body: some View {
         GeometryReader { geometry in
-            VStack (alignment: .leading) {
-                Text(title)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.bottom)
+            VStack {
                 VStack {
-                    Button("위치 권한 허용하기") {
+                    Text(title)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .padding(.bottom)
+                    Text(subtitle)
+                        .font(.title2)
+                        .padding(.bottom)
+                        .multilineTextAlignment(.center)
+                }
+                    .padding(.vertical)
+                VStack {
+                    Button {
                         let locationManager = CLLocationManager()
                         locationManager.requestWhenInUseAuthorization()
                         locationManager.desiredAccuracy = kCLLocationAccuracyBest
                         locationManager.distanceFilter = kCLDistanceFilterNone
                         locationManager.startUpdatingLocation()
                         location = locationManager.location
+                    } label: {
+                        Text("위치 권한 허용하기")
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .frame(width: 200, height: 50)
+                            .background(Color(red: 1.00, green: 0.55, blue: 0.00))
+                            .cornerRadius(6)
                     }
-                    .padding()
-                    Text("Latitude: \(location?.coordinate.latitude ?? 0), Longitude: \(location?.coordinate.longitude ?? 0)")
                 }
-                Text(subtitle)
-                    .font(.title2)
+                    .frame(width: geometry.size.width / 1)
                     .padding(.bottom)
-                Image(imageName)
-                    .font(.system(size: 100))
             }
-            .frame(width: geometry.size.width / 1)
-            .padding(.vertical)
+                .padding(.vertical)
         }
     }
 }
