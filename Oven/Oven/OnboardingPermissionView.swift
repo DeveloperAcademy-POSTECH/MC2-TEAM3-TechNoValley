@@ -15,6 +15,8 @@ struct OnboardingPermissionView: View {
     let subtitle: String
 
     var body: some View {
+        let locationManager = CLLocationManager()
+        
         GeometryReader { geometry in
             VStack {
                 VStack {
@@ -30,12 +32,11 @@ struct OnboardingPermissionView: View {
                     .padding(.vertical)
                 VStack {
                     Button {
-                        let locationManager = CLLocationManager()
                         locationManager.requestWhenInUseAuthorization()
-                        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-                        locationManager.distanceFilter = kCLDistanceFilterNone
-                        locationManager.startUpdatingLocation()
-                        location = locationManager.location
+//                        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//                        locationManager.distanceFilter = kCLDistanceFilterNone
+//                        locationManager.startUpdatingLocation()
+//                        location = locationManager.location
                     } label: {
                         Text("위치 권한 허용하기")
                             .fontWeight(.bold)
