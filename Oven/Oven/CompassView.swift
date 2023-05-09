@@ -16,7 +16,6 @@ struct CompassView: View {
     var body: some View {
         NavigationView {
             let difference = compassHeading.degrees + randomAngle
-            
             GeometryReader { geometry in
                 Path { path in
                     var xCoordinate = difference/360 * geometry.size.width
@@ -50,6 +49,9 @@ struct CompassView: View {
                 NavigationLink(destination: TimerView(), isActive: $isShowingTimerView) {
                 }
             )
+            .onAppear {
+                isMiddle = false
+            }
         }
     }
     
