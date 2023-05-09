@@ -16,6 +16,7 @@ struct CompassView: View {
     var body: some View {
         NavigationView {
             let difference = compassHeading.degrees + randomAngle
+            
             GeometryReader { geometry in
                 Path { path in
                     var xCoordinate = difference/360 * geometry.size.width
