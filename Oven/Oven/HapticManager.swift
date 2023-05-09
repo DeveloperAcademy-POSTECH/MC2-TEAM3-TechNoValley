@@ -5,7 +5,8 @@
 //  Created by 금가경 on 2023/05/09.
 //
 
-import SwiftUI
+import Foundation
+import UIKit
 
 class HapticManager {
     static let instance = HapticManager()
