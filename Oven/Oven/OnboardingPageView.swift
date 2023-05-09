@@ -14,19 +14,23 @@ struct OnboardingPageView: View {
 
     var body: some View {
         GeometryReader { geometry in
-            VStack (alignment: .leading) {
-                Text(title)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.bottom)
-                Text(subtitle)
-                    .font(.title2)
-                    .padding(.bottom)
+            VStack {
+                VStack {
+                    Text(title)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .padding(.bottom)
+                    Text(subtitle)
+                        .font(.title3)
+                        .padding(.bottom)
+                        .multilineTextAlignment(.center)
+                }
+                    .padding(.vertical)
+
                 Image(imageName)
-                    .font(.system(size: 100))
+                    .frame(width: geometry.size.width / 1)
             }
-            .frame(width: geometry.size.width / 1)
-            .padding(.vertical)
+                .padding(.vertical)
         }
     }
 }
