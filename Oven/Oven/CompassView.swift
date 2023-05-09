@@ -54,7 +54,7 @@ struct CompassView: View {
     }
     
     private func startTimer() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             isShowingTimerView = true
         }
     }
