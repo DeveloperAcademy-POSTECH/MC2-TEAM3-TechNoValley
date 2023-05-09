@@ -37,7 +37,7 @@ struct OnboardingPermissionView: View {
                 Text(subtitle)
                     .font(.title2)
                     .padding(.bottom)
-                Image(systemName: imageName)
+                Image(imageName)
                     .font(.system(size: 100))
             }
             .frame(width: geometry.size.width / 1)

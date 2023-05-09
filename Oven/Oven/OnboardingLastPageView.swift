@@ -25,7 +25,7 @@ struct OnboardingLastPageView: View {
                 Text(subtitle)
                     .font(.title2)
                 
-                Image(systemName: imageName)
+                Image(imageName)
                     .font(.system(size: 100))
                     .padding()
                 

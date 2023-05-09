@@ -12,32 +12,39 @@ struct OnboardingTabView: View {
 
     var body: some View {
             TabView {
-                // 페이지 1
+                // 페이지
                 OnboardingPageView(
-                    imageName: "person.3.fill",
-                    title: "환영합니다.",
-                    subtitle: "Ov5n은 언제나 열정적인 당신을 위해\n일상 속 작은 휴식을 선물합니다. "
+                    imageName: "guide-sample",
+                    title: "열정적인 당신을 위해",
+                    subtitle: "오분은 일상 속 작은 휴식을 선물합니다."
                 )
 
-                // 페이지 2
+                // 페이지
                 OnboardingPageView(
-                    imageName: "note.text.badge.plus",
-                    title: "온보딩2",
-                    subtitle: "온보딩2 화면이에요."
+                    imageName: "guide-sample",
+                    title: "오분은 간단해요.",
+                    subtitle: "버튼만 누르면 오분 타이머가 시작되어요."
+                )
+                
+                // 페이지
+                OnboardingPageView(
+                    imageName: "guide-sample",
+                    title: "시선을 돌려봐요.",
+                    subtitle: "주황선으로 걷기 시작할 방향을 맞춰보세요."
                 )
 
-                // 페이지 3
+                // 페이지: 위치 권한 동의
                 OnboardingPermissionView(
-                    imageName: "face.smiling.inverse",
-                    title: "위치 권한 동의",
-                    subtitle: "식히기 위해 위치 권한 동의가 필요합니다."
+                    imageName: "guide-sample",
+                    title: "권한을 허용해주세요.",
+                    subtitle: "오분 휴식을 위한 필수적인 권한만을 요구합니다."
                 )
 
-                // 페이지 4: 온보딩 완료
+                // 페이지: 온보딩 완료
                 OnboardingLastPageView(
-                    imageName: "eyes",
-                    title: "온보딩4",
-                    subtitle: "온보딩4 화면이에요.",
+                    imageName: "guide-sample",
+                    title: "준비가 끝났어요.",
+                    subtitle: "오분의 여정을 시작해봐요.",
                     isFirstLaunching: $isFirstLaunching
                 )
             }
