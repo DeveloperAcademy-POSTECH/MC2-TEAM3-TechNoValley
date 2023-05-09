@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct InhaleView: View {
+    @State private var isScaled = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            Text(isScaled ? "내쉬세요" : "들이쉬고")
+            Spacer()
+            Circle()
+                .fill(Color.blue)
+                .frame(width: 100, height: 100)
+                .scaleEffect(isScaled ? 2 : 1)
+                .animation(.spring())
+                .onAppear {
+                Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { _ in
+                    self.isScaled.toggle()
+                }
+            }
+            Spacer()
+        }
     }
 }
 
