@@ -33,10 +33,6 @@ struct OnboardingPermissionView: View {
                 VStack {
                     Button {
                         locationManager.requestWhenInUseAuthorization()
-//                        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//                        locationManager.distanceFilter = kCLDistanceFilterNone
-//                        locationManager.startUpdatingLocation()
-//                        location = locationManager.location
                     } label: {
                         Text("위치 권한 허용하기")
                             .fontWeight(.bold)
