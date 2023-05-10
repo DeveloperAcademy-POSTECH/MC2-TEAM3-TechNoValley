@@ -15,7 +15,7 @@ struct OnboardingPageView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                VStack {
+                VStack(alignment: .leading) {
                     Text(title)
                         .font(.largeTitle)
                         .fontWeight(.bold)
@@ -23,14 +23,14 @@ struct OnboardingPageView: View {
                     Text(subtitle)
                         .font(.title3)
                         .padding(.bottom)
-                        .multilineTextAlignment(.center)
+//                        .multilineTextAlignment(.center)
                 }
-                    .padding(.vertical)
-
+                .frame(width: geometry.size.width, alignment: .leading)
+                
                 Image(imageName)
-                    .frame(width: geometry.size.width / 1)
+                    .frame(width: geometry.size.width, alignment: .center)
             }
-                .padding(.vertical)
+            .padding()
         }
     }
 }

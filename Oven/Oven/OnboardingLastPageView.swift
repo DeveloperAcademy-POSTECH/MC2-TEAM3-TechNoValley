@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingLastPageView: View {
-//    let imageName: String
+    let imageName: String
     let title: String
     let subtitle: String
 
@@ -27,10 +27,10 @@ struct OnboardingLastPageView: View {
                         .font(.title2)
                 }
                     .padding(.vertical)
-//                Image(imageName)
-//                    .padding()
-                // 온보딩 완료 버튼.
-                // AppStorage의 isFirstLaunching 값을 false로 바꾸기 때문에, 다음번에 앱을 실행할 때는 OnboardingTabView를 띄우지 않음.
+                Image(imageName)
+                    .padding()
+//                 온보딩 완료 버튼.
+//                 AppStorage의 isFirstLaunching 값을 false로 바꾸기 때문에, 다음번에 앱을 실행할 때는 OnboardingTabView를 띄우지 않음.
                 Spacer()
                 Button {
                     isFirstLaunching.toggle()
@@ -42,7 +42,7 @@ struct OnboardingLastPageView: View {
                         .background(Color(red: 1.00, green: 0.55, blue: 0.00))
                         .cornerRadius(6)
                 }
-                    .frame(width: geometry.size.width / 1)
+                    .frame(width: geometry.size.width)
                     .padding(.vertical)
                 Spacer()
             }
