@@ -18,9 +18,10 @@ struct TimerView: View {
         ZStack {
             
             Rectangle()
+                .cornerRadius(10)
                 .frame(width: 100, height: 100)
-                .border(Color.black, width: 2)
-                .foregroundColor(.white)
+                .border(Color(hex: "FFBC00"), width: 2)
+                .foregroundColor(Color(hex: "FFBC00"))
                 .overlay(Text("\(timeMinutes)")
                     .foregroundColor(.black)
                     .font(.largeTitle)
@@ -29,9 +30,8 @@ struct TimerView: View {
             
             
             Rectangle()
-                .fill(Color("FFBC00"))
-                .frame(width: 100, height: 100)
-            
+                .fill(Color(hex: "252526"))
+                .frame(width: 98, height: 98)
                 .scaleEffect(x: CGFloat(timeplus / 300), y: 1, anchor: .leading)
                 .onReceive(timer) { _ in
                     if timeplus >= 300 {
@@ -43,7 +43,7 @@ struct TimerView: View {
             
                 .animation(.linear(duration: 1), value: timeRemaining)
                 .overlay(Text("\(timeMinutes)")
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                     .font(.largeTitle)
                     .onReceive(timer) { _ in
                         if timeRemaining > 0 {
@@ -68,6 +68,20 @@ struct TimerView: View {
         }
     }
 }
+
+extension Color {
+    init(hex: String) {
+        let scanner = Scanner(string: hex)
+        var rgbValue: UInt64 = 0
+        scanner.scanHexInt64(&rgbValue)
+        let red = Double((rgbValue & 0xFF0000) >> 16) / 255.0
+        let green = Double((rgbValue & 0x00FF00) >> 8) / 255.0
+        let blue = Double(rgbValue & 0x0000FF) / 255.0
+        self.init(red: red, green: green, blue: blue)
+    }
+}
+
+
 
 
 struct TimerView_Previews: PreviewProvider {
