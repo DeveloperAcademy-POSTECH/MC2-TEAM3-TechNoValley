@@ -30,6 +30,7 @@
 		C229454B2A08D9DF0006C65B /* OnboardingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C229454A2A08D9DF0006C65B /* OnboardingTabView.swift */; };
 		C229454D2A08DA680006C65B /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C229454C2A08DA680006C65B /* OnboardingPageView.swift */; };
 		C229454F2A08DAC70006C65B /* OnboardingLastPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C229454E2A08DAC70006C65B /* OnboardingLastPageView.swift */; };
+		F3D206202A0B8D8F00DB6D68 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F3D2061F2A0B8D8F00DB6D68 /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D206202A0B8D8F00DB6D68 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +193,9 @@
 			dependencies = (
 			);
 			name = Oven;
+			packageProductDependencies = (
+				F3D2061F2A0B8D8F00DB6D68 /* Lottie */,
+			);
 			productName = Oven;
 			productReference = 03FB62FC2A056A5E000E94A6 /* Oven.app */;
 			productType = "com.apple.product-type.application";
@@ -263,6 +268,9 @@
 				Base,
 			);
 			mainGroup = 03FB62F32A056A5E000E94A6;
+			packageReferences = (
+				F3D2061E2A0B8D8F00DB6D68 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 03FB62FD2A056A5E000E94A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -647,6 +655,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3D2061E2A0B8D8F00DB6D68 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3D2061F2A0B8D8F00DB6D68 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3D2061E2A0B8D8F00DB6D68 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 03FB62F42A056A5E000E94A6 /* Project object */;
 }
