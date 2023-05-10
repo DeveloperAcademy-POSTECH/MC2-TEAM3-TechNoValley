@@ -24,6 +24,7 @@
 		03FB63342A05C9BF000E94A6 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63332A05C9BF000E94A6 /* TimerView.swift */; };
 		03FB63362A05C9CA000E94A6 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63352A05C9CA000E94A6 /* CompassView.swift */; };
 		03FB633A2A05C9F3000E94A6 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63392A05C9F3000E94A6 /* StepView.swift */; };
+		A95F08EC2A0B8D80002498BB /* RollingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F08EB2A0B8D80002498BB /* RollingText.swift */; };
 		C21EC3622A0B7E41007CD955 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21EC3612A0B7E41007CD955 /* HapticManager.swift */; };
 		C21EC3642A0B7E4E007CD955 /* CompassHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21EC3632A0B7E4E007CD955 /* CompassHeading.swift */; };
 		C21EC3662A0B7E5A007CD955 /* OnboardingPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21EC3652A0B7E5A007CD955 /* OnboardingPermissionView.swift */; };
@@ -70,6 +71,7 @@
 		03FB63332A05C9BF000E94A6 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		03FB63352A05C9CA000E94A6 /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
 		03FB63392A05C9F3000E94A6 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
+		A95F08EB2A0B8D80002498BB /* RollingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingText.swift; sourceTree = "<group>"; };
 		C21EC3612A0B7E41007CD955 /* HapticManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		C21EC3632A0B7E4E007CD955 /* CompassHeading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassHeading.swift; sourceTree = "<group>"; };
 		C21EC3652A0B7E5A007CD955 /* OnboardingPermissionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPermissionView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				C21EC3612A0B7E41007CD955 /* HapticManager.swift */,
 				03FB63032A056A5F000E94A6 /* Assets.xcassets */,
 				03FB63052A056A5F000E94A6 /* Preview Content */,
+				A95F08EB2A0B8D80002498BB /* RollingText.swift */,
 			);
 			path = Oven;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				03FB63022A056A5E000E94A6 /* HomeView.swift in Sources */,
 				03FB63322A05C9A4000E94A6 /* CompleteView.swift in Sources */,
 				C21EC3622A0B7E41007CD955 /* HapticManager.swift in Sources */,
+				A95F08EC2A0B8D80002498BB /* RollingText.swift in Sources */,
 				03FB632C2A05C956000E94A6 /* OnboardingView.swift in Sources */,
 				C229454F2A08DAC70006C65B /* OnboardingLastPageView.swift in Sources */,
 				0338D64E2A08ED3C0009D259 /* CompassHeading.swift in Sources */,
@@ -481,9 +485,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Oven/Preview Content\"";
-				DEVELOPMENT_TEAM = HLS34A9223;
+				DEVELOPMENT_TEAM = V59QA8T54G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMotionUsageDescription = "We are using motion usage in order to track your step count";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -510,9 +515,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Oven/Preview Content\"";
-				DEVELOPMENT_TEAM = HLS34A9223;
+				DEVELOPMENT_TEAM = V59QA8T54G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMotionUsageDescription = "We are using motion usage in order to track your step count";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
