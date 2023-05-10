@@ -1,20 +1,45 @@
-//
-//  StepView.swift
-//  Oven
-//
-//  Created by 금가경 on 2023/05/06.
-//
-
 import SwiftUI
+import CoreMotion
 
 struct StepView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    
+    // CMMotionActivityManager
+    private let activityManager = CMMotionActivityManager()
 
-struct StepView_Previews: PreviewProvider {
-    static var previews: some View {
-        StepView()
+    
+    // CMPedometer
+    private let pedometer = CMPedometer()
+    @State var stepsCount: Int = 0
+    
+    var body: some View {
+        VStack {
+            
+            RollingText(value: $stepsCount)
+                .font(.title)
+                .padding()
+        }
+        .onAppear() {
+            // CMMotionActivityManager
+
+            
+            // CMPedometer
+            if CMPedometer.isStepCountingAvailable() {
+                pedometer.startUpdates(from: Date()) { pedometerData, error in
+                    if let pedometerData = pedometerData, error == nil {
+                        DispatchQueue.main.async {
+                            self.stepsCount = pedometerData.numberOfSteps.intValue
+                            updateSteps()
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func updateSteps() {
+        withAnimation {
+            // stepsCount 값을 업데이트합니다.
+            stepsCount += 1
+        }
     }
 }
