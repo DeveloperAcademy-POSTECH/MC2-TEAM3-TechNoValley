@@ -21,16 +21,16 @@ struct OnboardingPageView: View {
                         .fontWeight(.bold)
                         .padding(.bottom)
                     Text(subtitle)
-                        .font(.title3)
+//                        .font(.title3)
                         .padding(.bottom)
 //                        .multilineTextAlignment(.center)
                 }
-                .frame(width: geometry.size.width, alignment: .leading)
+                .padding(EdgeInsets(top: 80, leading: 40, bottom: 40, trailing: 40))
+                .frame(width: geometry.size.width, height: geometry.size.height / 5, alignment: .leading)
                 
                 Image(imageName)
                     .frame(width: geometry.size.width, alignment: .center)
             }
-            .padding()
         }
     }
 }

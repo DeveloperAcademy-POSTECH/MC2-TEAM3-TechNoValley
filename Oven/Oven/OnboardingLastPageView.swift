@@ -17,21 +17,21 @@ struct OnboardingLastPageView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
+                Image(imageName)
+                    .frame(width: geometry.size.width, alignment: .center)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 45, trailing: 0))
+
                 VStack {
                     Text(title)
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                        .padding()
-
+                        .padding(.bottom)
                     Text(subtitle)
-                        .font(.title2)
+                        .padding(.bottom)
                 }
-                    .padding(.vertical)
-                Image(imageName)
-                    .padding()
+                    
 //                 온보딩 완료 버튼.
 //                 AppStorage의 isFirstLaunching 값을 false로 바꾸기 때문에, 다음번에 앱을 실행할 때는 OnboardingTabView를 띄우지 않음.
-                Spacer()
                 Button {
                     isFirstLaunching.toggle()
                 } label: {
@@ -43,9 +43,9 @@ struct OnboardingLastPageView: View {
                         .cornerRadius(6)
                 }
                     .frame(width: geometry.size.width)
-                    .padding(.vertical)
-                Spacer()
+                    .padding(EdgeInsets(top: 15, leading: 0, bottom: 100, trailing: 0))
             }
+            .frame(width: geometry.size.width, height: geometry.size.height)
         }
     }
 }
