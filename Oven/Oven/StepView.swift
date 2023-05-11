@@ -10,13 +10,27 @@ struct StepView: View {
     // CMPedometer
     private let pedometer = CMPedometer()
     @State var stepsCount: Int = 0
+    @State var stepsCount2: Int = 0
+    @State var stepsCount3: Int = 0
+    @State var stepDiff: Int = 0
+    @State var stepDiffSum: Int = 0
     
     var body: some View {
-        VStack {
+        HStack {
             
-            RollingText(value: $stepsCount)
+            RollingText(value: $stepsCount3)
                 .font(.title)
                 .padding()
+            
+            RollingText(value: $stepsCount2)
+                .font(.title)
+                .padding()
+            
+            RollingText(value: Binding(get: { self.stepsCount % 10 },
+                                       set: { self.stepsCount = $0 }))
+                .font(.title)
+                .padding()
+                
         }
         .onAppear() {
             // CMMotionActivityManager
@@ -27,8 +41,19 @@ struct StepView: View {
                 pedometer.startUpdates(from: Date()) { pedometerData, error in
                     if let pedometerData = pedometerData, error == nil {
                         DispatchQueue.main.async {
-                            self.stepsCount = pedometerData.numberOfSteps.intValue
-                            updateSteps()
+                            let newSteps = pedometerData.numberOfSteps.intValue
+                            stepDiff = newSteps - self.stepsCount
+                            // 이전 값 빼고 새로운 스텝 수 차이 계산
+                                    
+                            
+                                    self.stepsCount += stepDiff // 차이만큼만 더해 업데이트
+                            stepDiffSum += stepDiff
+                                    updateSteps()
+                            print(newSteps)
+                            print(stepDiff) // 차이값
+                            print(self.stepsCount)
+                                    
+                            
                         }
                     }
                 }
@@ -38,8 +63,21 @@ struct StepView: View {
     
     func updateSteps() {
         withAnimation {
-            // stepsCount 값을 업데이트합니다.
-            stepsCount += 1
+            if stepDiffSum >= 10 {
+                stepDiffSum -= 10
+                stepsCount2 += 1
+            }
+            if stepsCount2 >= 10 {
+                stepsCount2 = 0
+                stepsCount3 += 1
+            }
+            
         }
+    }
+}
+
+struct StepView_Previews: PreviewProvider {
+    static var previews: some View {
+        StepView()
     }
 }
