@@ -36,7 +36,7 @@ struct OnboardingTabView: View {
             // 페이지: 위치 권한 동의
             OnboardingPermissionView(
                 title: "권한을 허용해주세요.",
-                subtitle: "오분은 휴식을 위한 최소한의 권한만을 요구합니다."
+                subtitle: "도어는 휴식을 위한\n최소한의 권한만을 요구합니다."
             )
 
             // 페이지: 온보딩 완료

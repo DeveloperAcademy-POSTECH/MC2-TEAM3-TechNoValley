@@ -19,18 +19,17 @@ struct OnboardingPageView: View {
                     Text(title)
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                        .padding(.bottom)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 0))
                     Text(subtitle)
-//                        .font(.title3)
-                        .padding(.bottom)
-//                        .multilineTextAlignment(.center)
                 }
-                .padding(EdgeInsets(top: 80, leading: 40, bottom: 40, trailing: 40))
-                .frame(width: geometry.size.width, height: geometry.size.height / 5, alignment: .leading)
+                .padding(EdgeInsets(top: 40, leading: 40, bottom: 40, trailing: 40))
+                .frame(width: geometry.size.width, height: geometry.size.height / 5, alignment: .topLeading)
                 
                 Image(imageName)
                     .frame(width: geometry.size.width, alignment: .center)
             }
+            .padding(.vertical)
+            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .top)
         }
     }
 }

@@ -18,20 +18,20 @@ struct OnboardingPermissionView: View {
 
     var body: some View {
         let locationManager = CLLocationManager()
-        
+
         GeometryReader { geometry in
             VStack {
-                VStack {
+                VStack(alignment: .leading) {
                     Text(title)
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                        .padding(.bottom)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 0))
                     Text(subtitle)
-                        .font(.title2)
                         .padding(.bottom)
-                        .multilineTextAlignment(.center)
+//                        .multilineTextAlignment(.center)
                 }
-                    .padding(.vertical)
+                    .padding(EdgeInsets(top: 40, leading: 40, bottom: 40, trailing: 40))
+                    .frame(width: geometry.size.width, height: geometry.size.height / 3, alignment: .topLeading)
                 VStack {
                     Button {
                         locationManager.requestWhenInUseAuthorization()
@@ -60,8 +60,12 @@ struct OnboardingPermissionView: View {
                 }
                     .frame(width: geometry.size.width)
                     .padding(.bottom)
+                VStack {
+                    Text("만약 권한을 허용하지 않은 경우,/n시스템 설정에서 직접 권한을 허용해주시기 바랍니다.")
+                }
             }
                 .padding(.vertical)
+                .frame(width: geometry.size.width, height: geometry.size.height, alignment: .top)
         }
     }
 }
@@ -69,7 +73,7 @@ struct OnboardingPermissionView: View {
 class MotionManager {
     let motionManager = CMMotionActivityManager()
     let queue = OperationQueue()
-    
+
     func requestMotionPermission() {
         motionManager.startActivityUpdates(to: queue) { (activity) in
             // do nothing

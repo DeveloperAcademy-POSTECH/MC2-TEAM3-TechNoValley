@@ -35,7 +35,7 @@ struct OnboardingLastPageView: View {
                 Button {
                     isFirstLaunching.toggle()
                 } label: {
-                    Text("OVEN 시작하기")
+                    Text("DOOR 시작하기")
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .frame(width: 200, height: 50)
