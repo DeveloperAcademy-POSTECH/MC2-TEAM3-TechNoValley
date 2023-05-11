@@ -90,7 +90,7 @@ struct HomeView: View {
                 )
             }
             
-            ZStack {
+            NavigationLink(destination: OnboardingView()) {
                 Image(systemName: "questionmark.app.fill")
                     .resizable()
                     .scaledToFit()
