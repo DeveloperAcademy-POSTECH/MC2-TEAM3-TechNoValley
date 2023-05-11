@@ -20,8 +20,8 @@ struct TimerView: View {
             Rectangle()
                 .cornerRadius(10)
                 .frame(width: 100, height: 100)
-                .border(Color(hex: "FFBC00"), width: 2)
-                .foregroundColor(Color(hex: "FFBC00"))
+                .border(Color(hex: "FFBC00"), width: 2)//FFBC00
+                .foregroundColor(Color(hex: "252526"))
                 .overlay(Text("\(timeMinutes)")
                     .foregroundColor(.black)
                     .font(.largeTitle)
@@ -30,7 +30,7 @@ struct TimerView: View {
             
             
             Rectangle()
-                .fill(Color(hex: "252526"))
+                .fill(Color(hex: "FFBC00"))//252526
                 .frame(width: 98, height: 98)
                 .scaleEffect(x: CGFloat(timeplus / 300), y: 1, anchor: .leading)
                 .onReceive(timer) { _ in
