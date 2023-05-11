@@ -24,7 +24,7 @@ struct OvenApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                CompassView()
+                SplashView()
             }
             .navigationViewStyle(.stack)
         }
