@@ -9,7 +9,13 @@ import SwiftUI
 
 struct CompleteView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Circle()
+            .fill(Color(red: 1.00, green: 0.74, blue: 0.00))
+            .frame(width: 50, height: 50)
+        Text("고생하셨습니다. :-)")
+            .font(.largeTitle)
+            .padding(.bottom)
+        Text("3초 후에 홈화면으로 돌아갑니다.")
     }
 }
 
