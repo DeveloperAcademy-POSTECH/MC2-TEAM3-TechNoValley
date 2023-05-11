@@ -32,7 +32,7 @@
 		C229454F2A08DAC70006C65B /* OnboardingLastPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C229454E2A08DAC70006C65B /* OnboardingLastPageView.swift */; };
 		F3D206202A0B8D8F00DB6D68 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F3D2061F2A0B8D8F00DB6D68 /* Lottie */; };
 		F3F057C82A0BA2C300F3715C /* SplashLottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F057C72A0BA2C300F3715C /* SplashLottieView.swift */; };
-		F3F057CA2A0BA4C200F3715C /* Logo.json in Resources */ = {isa = PBXBuildFile; fileRef = F3F057C92A0BA4C200F3715C /* Logo.json */; };
+		F3F057CC2A0CC35200F3715C /* Logo.json in Resources */ = {isa = PBXBuildFile; fileRef = F3F057CB2A0CC35200F3715C /* Logo.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +80,7 @@
 		C229454C2A08DA680006C65B /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		C229454E2A08DAC70006C65B /* OnboardingLastPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLastPageView.swift; sourceTree = "<group>"; };
 		F3F057C72A0BA2C300F3715C /* SplashLottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashLottieView.swift; sourceTree = "<group>"; };
-		F3F057C92A0BA4C200F3715C /* Logo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Logo.json; sourceTree = "<group>"; };
+		F3F057CB2A0CC35200F3715C /* Logo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Logo.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,7 @@
 				03FB62FF2A056A5E000E94A6 /* OvenApp.swift */,
 				03FB63292A05C94D000E94A6 /* SplashView.swift */,
 				F3F057C72A0BA2C300F3715C /* SplashLottieView.swift */,
-				F3F057C92A0BA4C200F3715C /* Logo.json */,
+				F3F057CB2A0CC35200F3715C /* Logo.json */,
 				03FB632B2A05C956000E94A6 /* OnboardingView.swift */,
 				C229454C2A08DA680006C65B /* OnboardingPageView.swift */,
 				C229454E2A08DAC70006C65B /* OnboardingLastPageView.swift */,
@@ -295,7 +295,7 @@
 			files = (
 				03FB63072A056A5F000E94A6 /* Preview Assets.xcassets in Resources */,
 				03FB63042A056A5F000E94A6 /* Assets.xcassets in Resources */,
-				F3F057CA2A0BA4C200F3715C /* Logo.json in Resources */,
+				F3F057CC2A0CC35200F3715C /* Logo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

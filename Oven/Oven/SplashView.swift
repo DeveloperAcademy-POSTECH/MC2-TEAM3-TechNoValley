@@ -9,10 +9,16 @@ import SwiftUI
 
 struct SplashView: View {
     var body: some View {
-        SplashLottieView(jsonName: "Logo")
-            .background(Color(red: 0.15, green: 0.15, blue: 0.15))
-    }
-}
+        GeometryReader { geometry in
+                    ZStack {
+                        Color(red: 0.15, green: 0.15, blue: 0.15)
+                            .ignoresSafeArea()
+                        SplashLottieView(jsonName: "Logo")
+                            .frame(width: geometry.size.width * 0.4, height: geometry.size.height * 0.1)
+                    } 
+                }
+            }
+        }
 
 struct SplashView_Previews: PreviewProvider{
     static var previews: some View {
