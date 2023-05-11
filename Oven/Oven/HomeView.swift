@@ -61,7 +61,7 @@ struct HomeView: View {
                     .ignoresSafeArea()
                 
                 // Swipe Track
-                Capsule()
+                RoundedRectangle(cornerRadius: 5)
                     .frame(width: trackSize.width, height: trackSize.height)
                     .foregroundColor(Color.black).blendMode(.overlay).opacity(0.5)
                 
@@ -74,12 +74,12 @@ struct HomeView: View {
                 
                 // Thumb
                 ZStack {
-                    Capsule()
+                    RoundedRectangle(cornerRadius: 5)
                         .frame(width: thumbSize.width, height: thumbSize.height)
-                        .foregroundColor(Color.white)
+                        .foregroundColor(Color(red: 255, green: 188, blue: 0))
                     
-                    Image(systemName: "arrow.right")
-                        .foregroundColor(Color.black)
+//                    Image(systemName: "arrow.right")
+//                        .foregroundColor(Color.black)
                 }
                 .offset(x: getDragOffsetX(), y: 0)
                 .animation(Animation.spring(response: 0.3, dampingFraction: 0.8))
