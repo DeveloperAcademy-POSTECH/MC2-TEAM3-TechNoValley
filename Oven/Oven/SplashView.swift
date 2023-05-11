@@ -9,11 +9,12 @@ import SwiftUI
 
 struct SplashView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        LottieView(jsonName: "Logo")
+            .frame(width:300, height:300)
     }
 }
 
-struct SplashView_Previews: PreviewProvider {
+struct SplashView_Previews: PreviewProvider{
     static var previews: some View {
         SplashView()
     }
