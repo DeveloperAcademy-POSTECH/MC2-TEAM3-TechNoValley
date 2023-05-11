@@ -61,8 +61,9 @@ struct OnboardingPermissionView: View {
                     .frame(width: geometry.size.width)
                     .padding(.bottom)
                 VStack {
-                    Text("만약 권한을 허용하지 않은 경우,/n시스템 설정에서 직접 권한을 허용해주시기 바랍니다.")
+                    Text("만약 권한을 거부하신 경우, 시스템 설정에서 직접 권한을 허용해주셔야 합니다.")
                 }
+                    .padding(EdgeInsets(top: 200, leading: 40, bottom: 0, trailing: 40))
             }
                 .padding(.vertical)
                 .frame(width: geometry.size.width, height: geometry.size.height, alignment: .top)
