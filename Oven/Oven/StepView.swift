@@ -16,20 +16,23 @@ struct StepView: View {
     @State var stepDiffSum: Int = 0
     
     var body: some View {
-        HStack {
+        HStack(spacing:-2){
             
             RollingText(value: $stepsCount3)
                 .font(.title)
                 .padding()
+                .border(Color(hex: "FFBC00"), width: 2)
             
             RollingText(value: $stepsCount2)
                 .font(.title)
                 .padding()
+                .border(Color(hex: "FFBC00"), width: 2)
             
             RollingText(value: Binding(get: { self.stepsCount % 10 },
                                        set: { self.stepsCount = $0 }))
                 .font(.title)
                 .padding()
+                .border(Color(hex: "FFBC00"), width: 2)
                 
         }
         .onAppear() {
