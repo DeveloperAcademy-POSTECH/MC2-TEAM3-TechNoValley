@@ -19,14 +19,14 @@ struct SplashLottieView: UIViewRepresentable {
         let view = UIView(frame: .zero)
         let animation = LottieAnimation.named(name)
         let animationView = LottieAnimationView()
-        
+ 
         view.addSubview(animationView)
         
         animationView.animation = animation
         // AspectFit으로 적절한 크기의 에니매이션을 불러옵니다.
         animationView.contentMode = .scaleAspectFit
         // 애니메이션은 기본으로 Loop합니다.
-        animationView.loopMode = loopMode
+        animationView.loopMode = .loop
         // 애니메이션을 재생합니다
         animationView.play()
         // 백그라운드에서 재생이 멈추는 오류를 잡습니다
@@ -49,28 +49,3 @@ struct SplashLottieView: UIViewRepresentable {
 }
 
 
-//import UIKit
-//import Lottie
-//
-//class ViewController: UIViewController {
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//
-//        let animationView: LottieAnimationView = .init(name: "Logo")
-//        self.view.addSubview(animationView)
-//
-//        animationView.frame = self.view.bounds
-//        animationView.center = self.view.center
-//        animationView.contentMode = .scaleAspectFit
-//        animationView.loopMode = .loop
-//        animationView.play()
-//        animationView.backgroundBehavior = .pauseAndRestore
-//
-//        return UIView
-//
-//    }
-//    func updateUIView(_ uiView: UIViewType, context: Context) {
-//      }
-//}
