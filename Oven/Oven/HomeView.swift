@@ -89,6 +89,15 @@ struct HomeView: View {
                         .onEnded({ _ in self.handleDragEnded() })
                 )
             }
+            
+            ZStack {
+                Image(systemName: "questionmark.app.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 35, height: 35)
+                    .foregroundColor(Color(red: 255, green: 188, blue: 0))
+                    .frame(width: thumbSize.width * 10, height: thumbSize.height)
+            }
         }
     }
     // MARK: - Haptic feedback
