@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SplashView: View {
     var body: some View {
-        LottieView(jsonName: "Logo")
-            .frame(width:300, height:300)
+        SplashLottieView(jsonName: "Logo")
+            .background(Color(red: 0.15, green: 0.15, blue: 0.15))
     }
 }
 
