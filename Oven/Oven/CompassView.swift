@@ -102,12 +102,12 @@ struct CompassView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 0.15, green: 0.15, blue: 0.15))
                     .background(
-                        NavigationLink(destination: TimerView(), isActive: $isShowingTimerView) {
+                        NavigationLink(destination: StepView(), isActive: $isShowingTimerView) {
                         }
                     )
                     if isMiddle {
                         Text("이제 걸어볼까요?")
-                            .font(.custom("esamanruOTFLight", size: 14))
+                            .font(.custom("esamanruOTFLight", size: 14git ))
                             .foregroundColor(Color(red: 1.00, green: 1.00, blue: 1.00))
                             .offset(y: geometry.size.height * 0.15)
                     }
