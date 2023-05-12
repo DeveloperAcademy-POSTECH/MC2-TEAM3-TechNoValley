@@ -16,6 +16,11 @@ struct InhaleView: View {
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
+                HStack {
+                    Spacer()
+                    TimerView(timeRemaining: 59, timeMinutes: 1 , timeplus: 241)
+                        .padding(20)
+                }
                 ZStack {
                     ZStack {
                         Circle()
