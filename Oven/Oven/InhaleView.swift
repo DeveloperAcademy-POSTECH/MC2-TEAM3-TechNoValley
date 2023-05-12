@@ -16,44 +16,51 @@ struct InhaleView: View {
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
-                HStack {
-                    Spacer()
-                    TimerView(timeRemaining: 59, timeMinutes: 1 , timeplus: 241)
-                        .padding(20)
-                }
                 ZStack {
+                    Color(red: 0.15, green: 0.15, blue: 0.15)
+                        .ignoresSafeArea()
+                    VStack {
+                        HStack {
+                            Spacer()
+                            TimerView(timeRemaining: 59, timeMinutes: 1, timeplus: 241)
+                                .padding(20)
+                        }
+                        Spacer()
+                    }
                     ZStack {
-                        Circle()
-                            .strokeBorder(Color(red: 1.00, green: 0.74, blue: 0.00), lineWidth: isScaled ? 4 : 2)
-                            .frame(width: 100, height: 100)
-                            .scaleEffect(isScaled ? 1 : 2)
-                            .animation(.spring(response: 1.5, dampingFraction: 0.45, blendDuration: 0.2))
-                            .onAppear {
-                            Timer.scheduledTimer(withTimeInterval: 2.9, repeats: true) { _ in
-                                self.isScaled.toggle()
+                        ZStack {
+                            Circle()
+                                .strokeBorder(Color(red: 1.00, green: 0.74, blue: 0.00), lineWidth: isScaled ? 4 : 2)
+                                .frame(width: 100, height: 100)
+                                .scaleEffect(isScaled ? 1 : 2)
+                                .animation(.spring(response: 1.5, dampingFraction: 0.45, blendDuration: 0.2))
+                                .onAppear {
+                                Timer.scheduledTimer(withTimeInterval: 2.9, repeats: true) { _ in
+                                    self.isScaled.toggle()
+                                }
                             }
                         }
-                    }
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 150, trailing: 0))
-                    ZStack (alignment: .center) {
-                        Text(texts[currentText])
-                            .font(.title3)
-                            .multilineTextAlignment(.center)
-                    }
-                        .lineSpacing(8)
-                        .padding(EdgeInsets(top: 200, leading: 0, bottom: 0, trailing: 0))
-                        .onReceive(Timer.publish(every: 2.89, on: .main, in: .common).autoconnect()) { _ in
-                        if self.currentText == self.texts.count - 1 {
-                            self.currentText = 0
-                        } else {
-                            self.currentText += 1
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 150, trailing: 0))
+                        ZStack (alignment: .center) {
+                            Text(texts[currentText])
+                                .font(.title3)
+                                .multilineTextAlignment(.center)
+                        }
+                            .lineSpacing(8)
+                            .padding(EdgeInsets(top: 200, leading: 0, bottom: 0, trailing: 0))
+                            .onReceive(Timer.publish(every: 2.89, on: .main, in: .common).autoconnect()) { _ in
+                            if self.currentText == self.texts.count - 1 {
+                                self.currentText = 0
+                            } else {
+                                self.currentText += 1
+                            }
+                        }
+                        NavigationLink(destination: CompleteView(), isActive: $isActive) {
+                            EmptyView()
                         }
                     }
-                    NavigationLink(destination: CompleteView(), isActive: $isActive) {
-                        EmptyView()
-                    }
+                        .frame(width: geometry.size.width, height: geometry.size.height)
                 }
-                    .frame(width: geometry.size.width, height: geometry.size.height)
             }
         }
             .navigationBarHidden(true)
