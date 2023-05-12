@@ -26,7 +26,7 @@ struct TimerView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color(hex: "FFBC00"), lineWidth: 3)
+                        .stroke(Color(hex: "FFBC00"), lineWidth: 3.5)
                 )
             
             
