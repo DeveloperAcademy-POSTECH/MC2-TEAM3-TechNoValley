@@ -17,22 +17,23 @@ struct TimerView: View {
     var body: some View {
         ZStack {
             
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 51, height: 51)
+            RoundedRectangle(cornerRadius: 3)
+                .frame(width: 40, height: 40)
                 .foregroundColor(Color(hex: "252526"))
                 .overlay(Text("\(timeMinutes)")
                     .font(.largeTitle)
                     .foregroundColor(.black))
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .clipShape(RoundedRectangle(cornerRadius: 3))
                 .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color(hex: "FFBC00"), lineWidth: 3.5)
+                    RoundedRectangle(cornerRadius: 3)
+                        .stroke(Color(hex: "FFBC00"), lineWidth: 2.5)
                 )
             
             
             Rectangle()
                 .fill(Color(hex: "FFBC00"))//252526
-                .frame(width: 48, height: 48)
+                .frame(width: 38, height: 38)
+                
                 .scaleEffect(x: CGFloat(timeplus / 300), y: 1, anchor: .leading)
                 .onReceive(timer) { _ in
                     if timeplus >= 300 {

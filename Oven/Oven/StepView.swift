@@ -38,6 +38,8 @@ struct StepView: View {
     
     var body: some View {
         
+        
+        
         VStack {
             
             HStack {
@@ -48,23 +50,41 @@ struct StepView: View {
             
             Spacer()
             
-            HStack(spacing:-2){
+            HStack(spacing:-3.2){
                 
                 RollingText(value: $stepsCount3)
                     .font(.title)
+                    .frame(width: 36, height: 80)
                     .padding()
-                    .border(Color(hex: "FFBC00"), width: 2)
+                    .border(Color(hex: "FFBC00"), width: 3.5)
+                    .cornerRadius(3)
+
                 
                 RollingText(value: $stepsCount2)
                     .font(.title)
+                    .frame(width: 36, height: 80)
                     .padding()
-                    .border(Color(hex: "FFBC00"), width: 2)
+                    .border(Color(hex: "FFBC00"), width: 3.5)
                 
                 RollingText(value: Binding(get: { self.stepsCount % 10 },
                                            set: { self.stepsCount = $0 }))
                 .font(.title)
+                .frame(width: 36, height: 80)
                 .padding()
-                .border(Color(hex: "FFBC00"), width: 2)
+                .border(Color(hex: "FFBC00"), width: 3.5)
+                .cornerRadius(3)
+                
+//                RoundedRectangle(cornerRadius: 10)
+//                    .frame(width: 51, height: 51)
+//                    .foregroundColor(Color(hex: "252526"))
+//                    .overlay(Text("\(timeMinutes)")
+//                        .font(.largeTitle)
+//                        .foregroundColor(.black))
+//                    .clipShape(RoundedRectangle(cornerRadius: 10))
+//                    .overlay(
+//                        RoundedRectangle(cornerRadius: 10)
+//                            .stroke(Color(hex: "FFBC00"), lineWidth: 3.5)
+//                    )
                 
             }
             .onAppear() {
@@ -99,20 +119,28 @@ struct StepView: View {
             switch stepDiffSum {
             case 0...100:
                 Text(StringList[Int.random(in: 0...2)])
+                    .foregroundColor(Color(hex: "D8D8D8"))
             case 101...200:
                 Text(StringList[Int.random(in: 3...5)])
+                    .foregroundColor(Color(hex: "D8D8D8"))
             case 201...300:
                 Text(StringList[Int.random(in: 6...7)])
+                    .foregroundColor(Color(hex: "D8D8D8"))
             case 301...400:
                 Text(StringList[Int.random(in: 8...9)])
+                    .foregroundColor(Color(hex: "D8D8D8"))
             case 401...500:
                 Text(StringList[Int.random(in: 10...11)])
+                    .foregroundColor(Color(hex: "D8D8D8"))
             case 501...600:
                 Text(StringList[Int.random(in: 12...13)])
+                    .foregroundColor(Color(hex: "D8D8D8"))
             case 601...800:
                 Text(StringList[Int.random(in: 14...15)])
+                    .foregroundColor(Color(hex: "D8D8D8"))
             case 801...999:
                 Text(StringList[Int.random(in: 16...17)])
+                    .foregroundColor(Color(hex: "D8D8D8"))
             default:
                 Text("오류")
             }
