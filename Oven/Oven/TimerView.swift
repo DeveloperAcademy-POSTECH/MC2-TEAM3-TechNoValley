@@ -9,29 +9,33 @@ import SwiftUI
 
 
 struct TimerView: View {
-    @State var timeRemaining: Double = 300
+    @State var timeRemaining: Double
     @State var timeMinutes = 5
     @State var timeplus:Double = 0
+    @State private var isActive = false
+    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         ZStack {
             
-            Rectangle()
-                .cornerRadius(10)
-                .frame(width: 100, height: 100)
-                .border(Color(hex: "FFBC00"), width: 2)
-                .foregroundColor(Color(hex: "FFBC00"))
+            RoundedRectangle(cornerRadius: 3)
+                .frame(width: 40, height: 40)
+                .foregroundColor(Color(hex: "252526"))
                 .overlay(Text("\(timeMinutes)")
-                    .foregroundColor(.black)
                     .font(.largeTitle)
-                         
+                    .foregroundColor(.black))
+                .clipShape(RoundedRectangle(cornerRadius: 3))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 3)
+                        .stroke(Color(hex: "FFBC00"), lineWidth: 2.5)
                 )
             
             
             Rectangle()
-                .fill(Color(hex: "252526"))
-                .frame(width: 98, height: 98)
+                .fill(Color(hex: "FFBC00"))//252526
+                .frame(width: 38, height: 38)
+                
                 .scaleEffect(x: CGFloat(timeplus / 300), y: 1, anchor: .leading)
                 .onReceive(timer) { _ in
                     if timeplus >= 300 {
@@ -49,6 +53,12 @@ struct TimerView: View {
                         if timeRemaining > 0 {
                             timeRemaining -= 1
                         }
+                        
+                        if timeRemaining == 280 {
+                                    isActive = true
+                                }
+                        //60초가 남으면 넘어가게
+                        
                         switch timeRemaining {
                         case 240...300: timeMinutes = 5
                         case 180...240: timeMinutes = 4
@@ -58,7 +68,14 @@ struct TimerView: View {
                         case 0: timeMinutes = 0
                         default: timeMinutes = -1
                         }
-                    })
+                    }
+                    .background(
+                        NavigationLink(
+                            destination: InhaleView(),
+                            isActive: $isActive,
+                            label: { EmptyView() }
+                        )
+                    ))
             
 
             
@@ -86,6 +103,6 @@ extension Color {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView()
+        TimerView(timeRemaining: 300)
     }
 }

@@ -148,10 +148,12 @@
 				03FB63012A056A5E000E94A6 /* HomeView.swift */,
 				03FB632D2A05C993000E94A6 /* LocationView.swift */,
 				03FB632F2A05C99B000E94A6 /* InhaleView.swift */,
+				0338D64D2A08ED3C0009D259 /* CompassHeading.swift */,
 				03FB63312A05C9A4000E94A6 /* CompleteView.swift */,
 				03FB63332A05C9BF000E94A6 /* TimerView.swift */,
 				03FB63352A05C9CA000E94A6 /* CompassView.swift */,
 				C21EC3632A0B7E4E007CD955 /* CompassHeading.swift */,
+				032D578D2A09F2390091E1A5 /* HapticManager.swift */,
 				03FB63392A05C9F3000E94A6 /* StepView.swift */,
 				C21EC3612A0B7E41007CD955 /* HapticManager.swift */,
 				032D57A12A0CC5F20091E1A5 /* Font+.swift */,
@@ -500,6 +502,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Oven/Info.plist;
 				INFOPLIST_KEY_NSMotionUsageDescription = "We are using motion usage in order to track your step count";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "식히기 위해 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -531,6 +534,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Oven/Info.plist;
 				INFOPLIST_KEY_NSMotionUsageDescription = "We are using motion usage in order to track your step count";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "식히기 위해 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
