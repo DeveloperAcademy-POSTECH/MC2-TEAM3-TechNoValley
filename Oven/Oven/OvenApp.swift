@@ -23,10 +23,11 @@ struct OvenApp: App {
         }
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                SplashView()
-            }
-            .navigationViewStyle(.stack)
+            HomeView()
+//            NavigationView {
+//                SplashView()
+//            }
+//            .navigationViewStyle(.stack)
         }
     }
 }
