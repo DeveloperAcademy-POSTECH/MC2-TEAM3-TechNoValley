@@ -12,6 +12,8 @@ struct TimerView: View {
     @State var timeRemaining: Double = 300
     @State var timeMinutes = 5
     @State var timeplus:Double = 0
+    @State private var isActive = false
+    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -51,6 +53,11 @@ struct TimerView: View {
                         if timeRemaining > 0 {
                             timeRemaining -= 1
                         }
+                        
+                        if timeMinutes == 4 {
+                                    isActive = true
+                                }
+                        
                         switch timeRemaining {
                         case 240...300: timeMinutes = 5
                         case 180...240: timeMinutes = 4
@@ -60,7 +67,14 @@ struct TimerView: View {
                         case 0: timeMinutes = 0
                         default: timeMinutes = -1
                         }
-                    })
+                    }
+                    .background(
+                        NavigationLink(
+                            destination: InhaleView(),
+                            isActive: $isActive,
+                            label: { EmptyView() }
+                        )
+                    ))
             
 
             
