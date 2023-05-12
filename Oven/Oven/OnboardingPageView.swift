@@ -14,23 +14,25 @@ struct OnboardingPageView: View {
 
     var body: some View {
         GeometryReader { geometry in
-            VStack {
+            ZStack {
                 VStack {
-                    Text(title)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .padding(.bottom)
-                    Text(subtitle)
-                        .font(.title3)
-                        .padding(.bottom)
-                        .multilineTextAlignment(.center)
+                    VStack(alignment: .leading) {
+                        Text(title)
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 0))
+                        Text(subtitle)
+                            .fontWeight(.medium) //폰트의 두께
+                    }
+                        .padding(EdgeInsets(top: 40, leading: 40, bottom: 40, trailing: 40))
+                        .frame(width: geometry.size.width, height: geometry.size.height / 5, alignment: .topLeading)
+
+                    Image(imageName)
+                        .frame(width: geometry.size.width, alignment: .center)
                 }
                     .padding(.vertical)
-
-                Image(imageName)
-                    .frame(width: geometry.size.width / 1)
+                    .frame(width: geometry.size.width, height: geometry.size.height, alignment: .top)
             }
-                .padding(.vertical)
         }
     }
 }

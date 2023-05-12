@@ -159,7 +159,6 @@ struct HomeView: View {
         }
         else {
             self.isEnough = false
-            
         }
     }
 
