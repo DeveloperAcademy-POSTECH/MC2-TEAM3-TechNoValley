@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		032D578E2A09F2390091E1A5 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D578D2A09F2390091E1A5 /* HapticManager.swift */; };
 		0338D64E2A08ED3C0009D259 /* CompassHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0338D64D2A08ED3C0009D259 /* CompassHeading.swift */; };
+		032D579E2A0CC1930091E1A5 /* esamanruOTFLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 032D579D2A0CC1930091E1A5 /* esamanruOTFLight.otf */; };
+		032D57A22A0CC5F20091E1A5 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D57A12A0CC5F20091E1A5 /* Font+.swift */; };
 		03FB63002A056A5E000E94A6 /* OvenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB62FF2A056A5E000E94A6 /* OvenApp.swift */; };
 		03FB63022A056A5E000E94A6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63012A056A5E000E94A6 /* HomeView.swift */; };
 		03FB63042A056A5F000E94A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03FB63032A056A5F000E94A6 /* Assets.xcassets */; };
@@ -53,6 +55,9 @@
 /* Begin PBXFileReference section */
 		032D578D2A09F2390091E1A5 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		0338D64D2A08ED3C0009D259 /* CompassHeading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassHeading.swift; sourceTree = "<group>"; };
+		032D579A2A0CBC4F0091E1A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		032D579D2A0CC1930091E1A5 /* esamanruOTFLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = esamanruOTFLight.otf; sourceTree = "<group>"; };
+		032D57A12A0CC5F20091E1A5 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		03FB62FC2A056A5E000E94A6 /* Oven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03FB62FF2A056A5E000E94A6 /* OvenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvenApp.swift; sourceTree = "<group>"; };
 		03FB63012A056A5E000E94A6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -105,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		032D57972A0CBA570091E1A5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				032D579D2A0CC1930091E1A5 /* esamanruOTFLight.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		03FB62F32A056A5E000E94A6 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +141,7 @@
 		03FB62FE2A056A5E000E94A6 /* Oven */ = {
 			isa = PBXGroup;
 			children = (
+				032D579A2A0CBC4F0091E1A5 /* Info.plist */,
 				03FB62FF2A056A5E000E94A6 /* OvenApp.swift */,
 				03FB63292A05C94D000E94A6 /* SplashView.swift */,
 				03FB632B2A05C956000E94A6 /* OnboardingView.swift */,
@@ -146,6 +160,8 @@
 				032D578D2A09F2390091E1A5 /* HapticManager.swift */,
 				03FB63392A05C9F3000E94A6 /* StepView.swift */,
 				C21EC3612A0B7E41007CD955 /* HapticManager.swift */,
+				032D57A12A0CC5F20091E1A5 /* Font+.swift */,
+				032D57972A0CBA570091E1A5 /* Fonts */,
 				03FB63032A056A5F000E94A6 /* Assets.xcassets */,
 				03FB63052A056A5F000E94A6 /* Preview Content */,
 				A95F08EB2A0B8D80002498BB /* RollingText.swift */,
@@ -284,6 +300,7 @@
 			files = (
 				03FB63072A056A5F000E94A6 /* Preview Assets.xcassets in Resources */,
 				03FB63042A056A5F000E94A6 /* Assets.xcassets in Resources */,
+				032D579E2A0CC1930091E1A5 /* esamanruOTFLight.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +338,7 @@
 				03FB63302A05C99B000E94A6 /* InhaleView.swift in Sources */,
 				C229454B2A08D9DF0006C65B /* OnboardingTabView.swift in Sources */,
 				03FB63002A056A5E000E94A6 /* OvenApp.swift in Sources */,
+				032D57A22A0CC5F20091E1A5 /* Font+.swift in Sources */,
 				03FB63362A05C9CA000E94A6 /* CompassView.swift in Sources */,
 				03FB63342A05C9BF000E94A6 /* TimerView.swift in Sources */,
 				C229454D2A08DA680006C65B /* OnboardingPageView.swift in Sources */,
@@ -485,9 +503,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Oven/Preview Content\"";
-				DEVELOPMENT_TEAM = V59QA8T54G;
+				DEVELOPMENT_TEAM = RFZY2ACQ74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Oven/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "도어를 사용하기 위해 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "도어를 사용하기 위해 모션 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -516,9 +535,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Oven/Preview Content\"";
-				DEVELOPMENT_TEAM = V59QA8T54G;
+				DEVELOPMENT_TEAM = RFZY2ACQ74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Oven/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "도어를 사용하기 위해 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "도어를 사용하기 위해 모션 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
