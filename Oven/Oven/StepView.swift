@@ -7,6 +7,7 @@ struct StepView: View {
     private let activityManager = CMMotionActivityManager()
     
     
+    
     // CMPedometer
     private let pedometer = CMPedometer()
     @State var stepsCount: Int = 0
@@ -45,7 +46,7 @@ struct StepView: View {
             
             HStack {
                 Spacer()
-                TimerView(timeRemaining: .constant(300))
+                TimerView(timeRemaining: 300)
                     .padding(20)
             }
             
@@ -175,6 +176,6 @@ struct StepView: View {
 struct StepView_Previews: PreviewProvider {
     static var previews: some View {
         StepView()
-        TimerView(timeRemaining: .constant(300))
+        TimerView(timeRemaining: 300)
     }
 }
