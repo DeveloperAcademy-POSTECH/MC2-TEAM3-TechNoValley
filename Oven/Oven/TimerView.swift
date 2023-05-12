@@ -17,15 +17,16 @@ struct TimerView: View {
     var body: some View {
         ZStack {
             
-            Rectangle()
-                .cornerRadius(10)
-                .frame(width: 50, height: 50)
-                .border(Color(hex: "FFBC00"), width: 2)//FFBC00
+            RoundedRectangle(cornerRadius: 10)
+                .frame(width: 51, height: 51)
                 .foregroundColor(Color(hex: "252526"))
                 .overlay(Text("\(timeMinutes)")
-                    .foregroundColor(.black)
                     .font(.largeTitle)
-                         
+                    .foregroundColor(.black))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color(hex: "FFBC00"), lineWidth: 3)
                 )
             
             
