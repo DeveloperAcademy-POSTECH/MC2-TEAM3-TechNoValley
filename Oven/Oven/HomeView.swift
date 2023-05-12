@@ -10,16 +10,13 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         ZStack {
-            OnboardingView()
-        }
-        ZStack {
             VStack {
                 Image(systemName: "globe")
                     .imageScale(.large)
                     .foregroundColor(.accentColor)
                 Text("Hello, world!")
             }
-            .padding()
+                .padding()
         }
     }
 }
