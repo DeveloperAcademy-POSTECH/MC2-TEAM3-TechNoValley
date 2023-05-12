@@ -15,6 +15,7 @@ struct StepView: View {
     @State var stepDiff: Int = 0
     @State var stepDiffSum: Int = 0
     
+    
     @State var StringList: [String] = ["시작은 언제나 첫 걸음 부터",
                                        "신선한 공기를 한껏 마시고 출발해봐요!",
                                        "평소에 가보지 않았던 곳으로 가보는건 어때요?",
@@ -44,7 +45,7 @@ struct StepView: View {
             
             HStack {
                 Spacer()
-                TimerView()
+                TimerView(timeRemaining: .constant(300))
                     .padding(20)
             }
             
@@ -174,6 +175,6 @@ struct StepView: View {
 struct StepView_Previews: PreviewProvider {
     static var previews: some View {
         StepView()
-        TimerView()
+        TimerView(timeRemaining: .constant(300))
     }
 }
