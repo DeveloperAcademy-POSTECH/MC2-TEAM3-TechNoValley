@@ -8,12 +8,29 @@
 import SwiftUI
 
 struct SplashView: View {
+    @State private var isAnimating = true
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { geometry in
+            ZStack {
+                Color(red: 0.15, green: 0.15, blue: 0.15)
+                    .ignoresSafeArea()
+                VStack {
+                    Spacer()
+                    SplashLottieView(jsonName: "Logo")
+                        .frame(width: geometry.size.width * 0.5, height: geometry.size.height * 0.5)
+                    Spacer()
+                        Text("v1.0-a")
+                            .foregroundColor(.white)
+                        Text("Created by TechNoValley")
+                            .foregroundColor(.white)
+                }
+            }
+        }
     }
 }
 
-struct SplashView_Previews: PreviewProvider {
+struct SplashView_Previews: PreviewProvider{
     static var previews: some View {
         SplashView()
     }
