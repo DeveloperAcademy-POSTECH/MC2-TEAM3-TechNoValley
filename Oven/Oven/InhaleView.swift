@@ -51,6 +51,7 @@ struct InhaleView: View {
                     .frame(width: geometry.size.width, height: geometry.size.height)
             }
         }
+            .navigationBarHidden(true)
             .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 60.0) {
                 isActive = true
