@@ -46,7 +46,7 @@ struct StepView: View {
             
             HStack {
                 Spacer()
-                TimerView(timeRemaining: 300)
+                TimerView()
                     .padding(20)
             }
             
@@ -118,7 +118,7 @@ struct StepView: View {
             }
             Spacer()
             
-            switch stepDiffSum {
+            switch stepsCount {
             case 0...100:
                 Text(StringList[Int.random(in: 0...2)])
                     .foregroundColor(Color(hex: "D8D8D8"))
@@ -176,6 +176,6 @@ struct StepView: View {
 struct StepView_Previews: PreviewProvider {
     static var previews: some View {
         StepView()
-        TimerView(timeRemaining: 300)
+        
     }
 }

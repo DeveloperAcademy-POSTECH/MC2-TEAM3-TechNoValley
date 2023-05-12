@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct TimerView: View {
-    @State var timeRemaining: Double
+    @State var timeRemaining: Double = 300
     @State var timeMinutes = 5
     @State var timeplus:Double = 0
     @State private var isActive = false
@@ -54,7 +54,7 @@ struct TimerView: View {
                             timeRemaining -= 1
                         }
                         
-                        if timeRemaining == 280 {
+                        if timeRemaining == 60 {
                                     isActive = true
                                 }
                         //60초가 남으면 넘어가게
