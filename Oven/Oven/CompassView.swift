@@ -107,7 +107,7 @@ struct CompassView: View {
                     )
                     if isMiddle {
                         Text("이제 걸어볼까요?")
-                            .font(.custom("esamanruOTFLight", size: 14git ))
+                            .font(.custom("esamanruOTFLight", size: 14))
                             .foregroundColor(Color(red: 1.00, green: 1.00, blue: 1.00))
                             .offset(y: geometry.size.height * 0.15)
                     }
