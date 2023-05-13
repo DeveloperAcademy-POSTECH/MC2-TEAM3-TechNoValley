@@ -24,30 +24,30 @@ struct CompassView: View {
                         Spacer()
                         
                         Text(isMiddle ? "잘하셨어요!": "이쪽이에요")
-                            .foregroundColor(Color(red: 1.00, green: 1.00, blue: 1.00))
+                            .foregroundColor(glowWhite)
                             .font(.custom("esamanruOTFLight", size: 21))
                         
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color(red: 0.30, green: 0.30, blue: 0.30), lineWidth: 4)
+                                .stroke(heavygray, lineWidth: 4)
                                 .frame(width: geometry.size.width * 0.3, height: geometry.size.width * 0.3)
                             
                             Path { path in
                                 path.move(to: CGPoint(x: geometry.size.width * 0.5, y: 0))
                                 path.addLine(to: CGPoint(x: geometry.size.width * 0.5, y: geometry.size.width * 0.3))
                             }
-                            .stroke(Color(red: 1.00, green: 1.00, blue: 1.00), lineWidth: 1.5)
+                            .stroke(glowWhite, lineWidth: 1.5)
                             .frame(height: geometry.size.width * 0.3)
                             
                             ZStack {
                                 if isRight {
                                     Image(systemName: "arrowtriangle.left.fill")
-                                        .foregroundColor(Color(red: 1.00, green: 0.74, blue: 0.00))
+                                        .foregroundColor(surgeonOrange)
                                         .offset(x: -geometry.size.width * 0.22)
                                 }
                                 else if isLeft {
                                     Image(systemName: "arrowtriangle.right.fill")
-                                        .foregroundColor(Color(red: 1.00, green: 0.74, blue: 0.00))
+                                        .foregroundColor(surgeonOrange)
                                         .offset(x: geometry.size.width * 0.22)
                                 }
                                 
@@ -91,7 +91,7 @@ struct CompassView: View {
                                     path.move(to: CGPoint(x: xCoordinate, y: 0))
                                     path.addLine(to: CGPoint(x: xCoordinate, y: geometry.size.width * 0.3))
                                 }
-                                .stroke(Color(red: 1.00, green: 0.74, blue: 0.00), lineWidth: 4)
+                                .stroke(surgeonOrange, lineWidth: 4)
                                 .frame(height: geometry.size.width * 0.3)
                             }
                             .frame(height: geometry.size.width * 0.3)
@@ -100,7 +100,7 @@ struct CompassView: View {
                         Spacer()
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color(red: 0.15, green: 0.15, blue: 0.15))
+                    .background(chillBlack)
                     .background(
                         NavigationLink(destination: StepView(), isActive: $isShowingTimerView) {
                         }
@@ -108,7 +108,7 @@ struct CompassView: View {
                     if isMiddle {
                         Text("이제 걸어볼까요?")
                             .font(.custom("esamanruOTFLight", size: 14))
-                            .foregroundColor(Color(red: 1.00, green: 1.00, blue: 1.00))
+                            .foregroundColor(glowWhite)
                             .offset(y: geometry.size.height * 0.15)
                     }
                 }
