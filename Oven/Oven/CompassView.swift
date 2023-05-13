@@ -36,7 +36,7 @@ struct CompassView: View {
                                 path.move(to: CGPoint(x: geometry.size.width * 0.5, y: 0))
                                 path.addLine(to: CGPoint(x: geometry.size.width * 0.5, y: geometry.size.width * 0.3))
                             }
-                            .stroke(Color(red: 1.00, green: 1.00, blue: 1.00))
+                            .stroke(Color(red: 1.00, green: 1.00, blue: 1.00), lineWidth: 1.5)
                             .frame(height: geometry.size.width * 0.3)
                             
                             ZStack {
@@ -91,7 +91,7 @@ struct CompassView: View {
                                     path.move(to: CGPoint(x: xCoordinate, y: 0))
                                     path.addLine(to: CGPoint(x: xCoordinate, y: geometry.size.width * 0.3))
                                 }
-                                .stroke(Color(red: 1.00, green: 0.74, blue: 0.00))
+                                .stroke(Color(red: 1.00, green: 0.74, blue: 0.00), lineWidth: 4)
                                 .frame(height: geometry.size.width * 0.3)
                             }
                             .frame(height: geometry.size.width * 0.3)
