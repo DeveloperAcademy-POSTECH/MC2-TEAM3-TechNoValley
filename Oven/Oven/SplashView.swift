@@ -44,17 +44,14 @@ struct SplashView: View {
         .background(
             // NavigationLink to next page
             NavigationLink(destination:
-                            Group {
-                                if isFirstLaunching {
-                                    OnboardingView()
-                                } else {
-                                    HomeView()
-                                }
-                            },
-                           isActive: $isActive) {
-                               EmptyView()
-                           }
-        )
+                Group {
+                    if isFirstLaunching {
+                            OnboardingView()
+                        } else {
+                            HomeView()
+                        }
+            }, isActive: $isActive){
+        })
     }
 }
 
