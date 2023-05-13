@@ -21,11 +21,16 @@ struct SplashView: View {
                     Spacer()
                     SplashLottieView(jsonName: "Logo")
                         .frame(width: geometry.size.width * 0.5, height: geometry.size.height * 0.5)
+                        .offset(y : -geometry.size.height * 0.05)
                     Spacer()
                     Text("v1.0-a")
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(red: 0.67, green: 0.67, blue: 0.67))
+                        .font(.custom("AppleSDGothicNeo-Regular", size: 14))
+                        .offset(y : -geometry.size.height * 0.05)
                     Text("Created by TechNoValley")
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(red: 0.67, green: 0.67, blue: 0.67))
+                        .font(.custom("AppleSDGothicNeo-Regular", size: 14))
+                        .offset(y : -geometry.size.height * 0.05)
                 }
             }
         }
