@@ -10,6 +10,7 @@
 		032D578E2A09F2390091E1A5 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D578D2A09F2390091E1A5 /* HapticManager.swift */; };
 		032D579E2A0CC1930091E1A5 /* esamanruOTFLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 032D579D2A0CC1930091E1A5 /* esamanruOTFLight.otf */; };
 		032D57A22A0CC5F20091E1A5 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D57A12A0CC5F20091E1A5 /* Font+.swift */; };
+		032D57AE2A0FDC0C0091E1A5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D57AD2A0FDC0C0091E1A5 /* Color.swift */; };
 		0338D64E2A08ED3C0009D259 /* CompassHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0338D64D2A08ED3C0009D259 /* CompassHeading.swift */; };
 		03FB63002A056A5E000E94A6 /* OvenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB62FF2A056A5E000E94A6 /* OvenApp.swift */; };
 		03FB63022A056A5E000E94A6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63012A056A5E000E94A6 /* HomeView.swift */; };
@@ -60,6 +61,7 @@
 		032D579A2A0CBC4F0091E1A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		032D579D2A0CC1930091E1A5 /* esamanruOTFLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = esamanruOTFLight.otf; sourceTree = "<group>"; };
 		032D57A12A0CC5F20091E1A5 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
+		032D57AD2A0FDC0C0091E1A5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		0338D64D2A08ED3C0009D259 /* CompassHeading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassHeading.swift; sourceTree = "<group>"; };
 		03FB62FC2A056A5E000E94A6 /* Oven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03FB62FF2A056A5E000E94A6 /* OvenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvenApp.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				C21EC3652A0B7E5A007CD955 /* OnboardingPermissionView.swift */,
 				C229454A2A08D9DF0006C65B /* OnboardingTabView.swift */,
 				03FB63012A056A5E000E94A6 /* HomeView.swift */,
+				032D57AD2A0FDC0C0091E1A5 /* Color.swift */,
 				03FB632D2A05C993000E94A6 /* LocationView.swift */,
 				03FB632F2A05C99B000E94A6 /* InhaleView.swift */,
 				0338D64D2A08ED3C0009D259 /* CompassHeading.swift */,
@@ -353,6 +356,7 @@
 				03FB632E2A05C993000E94A6 /* LocationView.swift in Sources */,
 				03FB63302A05C99B000E94A6 /* InhaleView.swift in Sources */,
 				C229454B2A08D9DF0006C65B /* OnboardingTabView.swift in Sources */,
+				032D57AE2A0FDC0C0091E1A5 /* Color.swift in Sources */,
 				03FB63002A056A5E000E94A6 /* OvenApp.swift in Sources */,
 				032D57A22A0CC5F20091E1A5 /* Font+.swift in Sources */,
 				03FB63362A05C9CA000E94A6 /* CompassView.swift in Sources */,

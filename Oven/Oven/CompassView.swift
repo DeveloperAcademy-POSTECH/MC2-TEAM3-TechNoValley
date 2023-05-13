@@ -29,7 +29,7 @@ struct CompassView: View {
                         
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(heavygray, lineWidth: 4)
+                                .stroke(heavyGray, lineWidth: 4)
                                 .frame(width: geometry.size.width * 0.3, height: geometry.size.width * 0.3)
                             
                             Path { path in
