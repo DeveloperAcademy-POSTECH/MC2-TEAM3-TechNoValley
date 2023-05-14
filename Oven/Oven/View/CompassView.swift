@@ -130,6 +130,7 @@ struct CompassView: View {
                 }
             }
         }
+        .navigationBarHidden(true)
     }
     
     //방향값이 중앙일 때 타이머 시작
