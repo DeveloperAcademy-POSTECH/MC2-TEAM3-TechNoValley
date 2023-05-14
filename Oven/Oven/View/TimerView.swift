@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct TimerView: View {
-    @State var timeRemaining: Double
+    @State var timeRemaining: Double = 300
     @State var timeMinutes = 5
     @State var timeplus:Double = 0
     @State private var isActive = false
@@ -22,7 +22,7 @@ struct TimerView: View {
                 .frame(width: 40, height: 40)
                 .foregroundColor(Color(hex: "252526"))
                 .overlay(Text("\(timeMinutes)")
-                    .font(.largeTitle)
+                    .font(.custom("esamanruOTFLight", size: 15))
                     .foregroundColor(.black))
                 .clipShape(RoundedRectangle(cornerRadius: 3))
                 .overlay(
@@ -36,7 +36,7 @@ struct TimerView: View {
                 .frame(width: 38, height: 38)
                 .scaleEffect(x: CGFloat(timeplus / 300), y: 1, anchor: .leading)
                 .onReceive(timer) { _ in
-                    if timeplus >= 300 {
+                    if timeplus >= 300 && timeplus <= 999{
                         timer.upstream.connect().cancel() // 타이머 중지
                     } else {
                         timeplus += 1
@@ -46,13 +46,14 @@ struct TimerView: View {
                 .animation(.linear(duration: 1), value: timeRemaining)
                 .overlay(Text("\(timeMinutes)")
                     .foregroundColor(.white)
-                    .font(.largeTitle)
+                    .font(.custom("esamanruOTFLight", size: 25))
+                    .offset(x:0, y: 1.6)// 폰트에 따라서 글자 여백이 조금 달라서 오프셋을 줌
                     .onReceive(timer) { _ in
                         if timeRemaining > 0 {
                             timeRemaining -= 1
                         }
                         
-                        if timeRemaining == 280 {
+                        if timeRemaining == 60 {
                                     isActive = true
                                 }
                         //60초가 남으면 넘어가게

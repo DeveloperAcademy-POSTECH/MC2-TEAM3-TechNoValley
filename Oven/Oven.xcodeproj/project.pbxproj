@@ -27,7 +27,7 @@
 		03FB63342A05C9BF000E94A6 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63332A05C9BF000E94A6 /* TimerView.swift */; };
 		03FB63362A05C9CA000E94A6 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63352A05C9CA000E94A6 /* CompassView.swift */; };
 		03FB633A2A05C9F3000E94A6 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63392A05C9F3000E94A6 /* StepView.swift */; };
-		A95F08EC2A0B8D80002498BB /* RollingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F08EB2A0B8D80002498BB /* RollingText.swift */; };
+		A95F08EC2A0B8D80002498BB /* RollingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F08EB2A0B8D80002498BB /* RollingTextView.swift */; };
 		C21EC3662A0B7E5A007CD955 /* OnboardingPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21EC3652A0B7E5A007CD955 /* OnboardingPermissionView.swift */; };
 		C229454B2A08D9DF0006C65B /* OnboardingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C229454A2A08D9DF0006C65B /* OnboardingTabView.swift */; };
 		C229454D2A08DA680006C65B /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C229454C2A08DA680006C65B /* OnboardingPageView.swift */; };
@@ -79,7 +79,7 @@
 		03FB63332A05C9BF000E94A6 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		03FB63352A05C9CA000E94A6 /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
 		03FB63392A05C9F3000E94A6 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
-		A95F08EB2A0B8D80002498BB /* RollingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingText.swift; sourceTree = "<group>"; };
+		A95F08EB2A0B8D80002498BB /* RollingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingTextView.swift; sourceTree = "<group>"; };
 		C21EC3652A0B7E5A007CD955 /* OnboardingPermissionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPermissionView.swift; sourceTree = "<group>"; };
 		C229454A2A08D9DF0006C65B /* OnboardingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabView.swift; sourceTree = "<group>"; };
 		C229454C2A08DA680006C65B /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
@@ -145,6 +145,7 @@
 		032D57B12A10AAA60091E1A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A95F08EB2A0B8D80002498BB /* RollingTextView.swift */,
 				03FB63392A05C9F3000E94A6 /* StepView.swift */,
 				03FB63292A05C94D000E94A6 /* SplashView.swift */,
 				F3F057C72A0BA2C300F3715C /* SplashLottieView.swift */,
@@ -161,6 +162,9 @@
 		032D57B22A10AC5E0091E1A5 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				032D57A12A0CC5F20091E1A5 /* Font+.swift */,
+				0338D64D2A08ED3C0009D259 /* CompassHeading.swift */,
+				032D578D2A09F2390091E1A5 /* HapticManager.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -191,9 +195,6 @@
 				032D579A2A0CBC4F0091E1A5 /* Info.plist */,
 				03FB62FF2A056A5E000E94A6 /* OvenApp.swift */,
 				F3F057CB2A0CC35200F3715C /* Logo.json */,
-				032D57A12A0CC5F20091E1A5 /* Font+.swift */,
-				0338D64D2A08ED3C0009D259 /* CompassHeading.swift */,
-				032D578D2A09F2390091E1A5 /* HapticManager.swift */,
 				032D57B12A10AAA60091E1A5 /* View */,
 				032D57B02A10AA790091E1A5 /* OnboardingView */,
 				032D57B22A10AC5E0091E1A5 /* Class */,
@@ -201,7 +202,6 @@
 				032D57972A0CBA570091E1A5 /* Fonts */,
 				03FB63032A056A5F000E94A6 /* Assets.xcassets */,
 				03FB63052A056A5F000E94A6 /* Preview Content */,
-				A95F08EB2A0B8D80002498BB /* RollingText.swift */,
 			);
 			path = Oven;
 			sourceTree = "<group>";
@@ -372,7 +372,7 @@
 				C21EC3662A0B7E5A007CD955 /* OnboardingPermissionView.swift in Sources */,
 				03FB63022A056A5E000E94A6 /* HomeView.swift in Sources */,
 				03FB63322A05C9A4000E94A6 /* CompleteView.swift in Sources */,
-				A95F08EC2A0B8D80002498BB /* RollingText.swift in Sources */,
+				A95F08EC2A0B8D80002498BB /* RollingTextView.swift in Sources */,
 				03FB632C2A05C956000E94A6 /* OnboardingView.swift in Sources */,
 				C229454F2A08DAC70006C65B /* OnboardingLastPageView.swift in Sources */,
 				0338D64E2A08ED3C0009D259 /* CompassHeading.swift in Sources */,
