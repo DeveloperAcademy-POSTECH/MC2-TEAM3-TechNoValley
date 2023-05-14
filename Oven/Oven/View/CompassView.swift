@@ -62,26 +62,28 @@ struct CompassView: View {
                                 default:
                                     break
                                 }
-                                
-                                if xCoordinate < geometry.size.width/2 {
-                                    isLeft = true
-                                    isRight = false
+                                DispatchQueue.main.async {
+                                    if xCoordinate < geometry.size.width/2 {
+                                        isLeft = true
+                                        isRight = false
+                                    }
+                                    else if xCoordinate > geometry.size.width/2 {
+                                        isRight = true
+                                        isLeft = false
+                                    }
+                                    else {
+                                        isRight = false
+                                        isLeft = false
+                                    }
                                 }
-                                else if xCoordinate > geometry.size.width/2 {
-                                    isRight = true
-                                    isLeft = false
-                                }
-                                else {
-                                    isRight = false
-                                    isLeft = false
-                                }
-                                
-                                if !isMiddle {
-                                    if Int(xCoordinate) == Int(geometry.size.width/2) {
-                                        isMiddle.toggle()
-                                        HapticManager.instance.notification(type: .success)
-                                        HapticManager.instance.impact(style: .heavy)
-                                        startTimer()
+                                DispatchQueue.main.async {
+                                    if !isMiddle {
+                                        if Int(xCoordinate) == Int(geometry.size.width/2) {
+                                            isMiddle.toggle()
+                                            HapticManager.instance.notification(type: .success)
+                                            HapticManager.instance.impact(style: .heavy)
+                                            startTimer()
+                                        }
                                     }
                                 }
                                 if isMiddle {
@@ -104,6 +106,7 @@ struct CompassView: View {
                     NavigationLink(destination: StepView(), isActive: $isShowingTimerView) {
                     }
                 )
+                
                 if isMiddle {
                     Text("이제 걸어볼까요?")
                         .font(.custom("esamanruOTFLight", size: 14))
@@ -117,6 +120,7 @@ struct CompassView: View {
     private func startTimer() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             isShowingTimerView = true
+            compassHeading.stopUpdatingHeading()
         }
     }
 }

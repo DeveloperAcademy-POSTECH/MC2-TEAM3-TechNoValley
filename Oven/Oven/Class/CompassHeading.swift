@@ -38,4 +38,8 @@ class CompassHeading: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         self.degrees = newHeading.magneticHeading
     }
+    
+    func stopUpdatingHeading() {
+        self.locationManager.stopUpdatingHeading()
+        }
 }
