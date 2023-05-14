@@ -13,14 +13,16 @@ struct OnboardingView: View {
     @AppStorage("_isFirstLaunching") var isFirstLaunching: Bool = true
 
     var body: some View {
-        ZStack {
-            Color(red: 0.15, green: 0.15, blue: 0.15)
-                .ignoresSafeArea()
-            Text("App Main")
-            // 앱 최초 구동 시 전체화면으로 OnboardingTabView 띄우기
-            .fullScreenCover(isPresented: $isFirstLaunching) {
-                OnboardingTabView(isFirstLaunching: $isFirstLaunching)
+        NavigationView {
+            ZStack {
+                Color(red: 0.15, green: 0.15, blue: 0.15)
+                    .ignoresSafeArea()
+                // 앱 최초 구동 시 전체화면으로 OnboardingTabView 띄우기
+                    .fullScreenCover(isPresented: $isFirstLaunching) {
+                        OnboardingTabView(isFirstLaunching: $isFirstLaunching)
+                    }
             }
+            .navigationBarHidden(true)
         }
     }
 }
