@@ -6,8 +6,6 @@ struct StepView: View {
     // CMMotionActivityManager
     private let activityManager = CMMotionActivityManager()
     
-    
-    
     // CMPedometer
     private let pedometer = CMPedometer()
     @State var stepsCount: Int = 0
