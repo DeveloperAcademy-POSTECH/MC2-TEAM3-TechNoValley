@@ -46,6 +46,10 @@ struct HomeView: View {
     // Lets also keep track of when enough was swiped
     @State private var isEnough = false
     
+    @AppStorage("_isFirstLaunching") var isFirstLaunching: Bool = false
+    
+    @State private var isActive = false
+    
     // Actions
     private var actionSuccess: (() -> Void )?
     
@@ -66,6 +70,7 @@ struct HomeView: View {
                     ZStack {
                         Button(action: {
                             isOnboardingTabViewPresented.toggle()
+                            isFirstLaunching = true
                         }) {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 5)
