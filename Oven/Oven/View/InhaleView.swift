@@ -17,13 +17,21 @@ struct InhaleView: View {
         NavigationView {
             GeometryReader { geometry in
                 ZStack {
+                    
+                    
                     Color(red: 0.15, green: 0.15, blue: 0.15)
                         .ignoresSafeArea()
+                    TimerView(timeRemaining: 59, timeMinutes: 1, timeplus: 241)
+                        .padding(20)
+                        .offset(x:130, y:-330)
+                    
+                    
                     VStack {
                         HStack {
                             Spacer()
-                            TimerView(timeRemaining: 59, timeMinutes: 1, timeplus: 241)
-                                .padding(20)
+                            
+
+                            
                         }
                         Spacer()
                     }
@@ -43,8 +51,9 @@ struct InhaleView: View {
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 150, trailing: 0))
                         ZStack (alignment: .center) {
                             Text(texts[currentText])
-                                .font(.title3)
+                                .font(.custom("esamanruOTFLight", size: 23))
                                 .multilineTextAlignment(.center)
+                                .foregroundColor(.white)
                         }
                             .lineSpacing(8)
                             .padding(EdgeInsets(top: 200, leading: 0, bottom: 0, trailing: 0))
@@ -56,14 +65,14 @@ struct InhaleView: View {
                             }
                         }
                         NavigationLink(destination: CompleteView(), isActive: $isActive) {
-                            EmptyView()
+                            
                         }
                     }
                         .frame(width: geometry.size.width, height: geometry.size.height)
                 }
             }
         }
-            .navigationBarHidden(true)
+            
             .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 60.0) {
                 isActive = true

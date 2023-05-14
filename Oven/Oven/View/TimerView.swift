@@ -71,9 +71,9 @@ struct TimerView: View {
                     .background(
                         NavigationLink(
                             destination: InhaleView(),
-                            isActive: $isActive,
-                            label: { EmptyView() }
-                        )
+                            isActive: $isActive
+
+                        ){}
                     ))
             
 
