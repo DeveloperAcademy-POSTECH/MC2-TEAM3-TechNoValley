@@ -98,7 +98,7 @@ struct HomeView: View {
             }
             .background(
                 NavigationLink(destination: CompassView(), isActive: $isShowingCompassView) {
-                }
+                }.navigationBarHidden(true)
             )
         }
     }
