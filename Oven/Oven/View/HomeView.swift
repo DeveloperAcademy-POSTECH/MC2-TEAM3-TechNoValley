@@ -46,6 +46,10 @@ struct HomeView: View {
     // Lets also keep track of when enough was swiped
     @State private var isEnough = false
     
+    @AppStorage("_isFirstLaunching") var isFirstLaunching: Bool = false
+    
+    @State private var isActive = false
+    
     // Actions
     private var actionSuccess: (() -> Void )?
     
@@ -63,12 +67,25 @@ struct HomeView: View {
                 Color(red: 0.15, green: 0.15, blue: 0.15)
                     .ignoresSafeArea()
                 VStack {
-                    NavigationLink(destination:OnboardingView()){
-                        RoundedRectangle(cornerRadius: 5)
-                            .frame(width: geometry.size.width * 0.1, height: geometry.size.width * 0.1)
-                            .offset(x : geometry.size.width * 0.35)
-                            .foregroundColor(surgeonOrange)
+                  
+                    HStack {
+                        
+                        
+                        
+                        Button {
+                            isActive = true
+                            isFirstLaunching = true
+                        } label: {
+                            RoundedRectangle(cornerRadius: 5)
+                                .frame(width: geometry.size.width * 0.1, height: geometry.size.width * 0.1)
+                                .foregroundColor(surgeonOrange)
+                                
+                        }
+                        
                     }
+                  
+            
+
                     Spacer()
                     ZStack{
                         RoundedRectangle(cornerRadius: 5)

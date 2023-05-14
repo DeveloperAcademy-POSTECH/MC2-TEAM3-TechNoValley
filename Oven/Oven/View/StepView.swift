@@ -130,7 +130,7 @@ struct StepView: View {
                     
                 
                 
-                switch stepDiffSum {
+                switch stepsCount {
                 case 0...100:
                     Text(StringList[Int.random(in: 0...2)])
                         .foregroundColor(Color(hex: "D8D8D8"))
