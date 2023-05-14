@@ -16,23 +16,23 @@ struct OnboardingTabAgainView: View {
             TabView {
                 // 페이지
                 OnboardingPageView(
-                    imageName: "guide-sample",
-                    title: "열정적인 그대에게",
-                    subtitle: "도어는 일상 속 작은 휴식을 선물합니다."
-                )
-                
-                // 페이지
-                OnboardingPageView(
-                    imageName: "guide-sample",
+                    imageName: "onboarding01",
                     title: "도어는 간단해요.",
-                    subtitle: "버튼만 누르면 오분 타이머가 시작돼요."
+                    subtitle: "슬라이드를 밀어 도어를 시작해보세요."
                 )
                 
                 // 페이지
                 OnboardingPageView(
-                    imageName: "guide-sample",
+                    imageName: "onboarding02",
                     title: "시선을 돌려봐요.",
-                    subtitle: "선을 화면 중앙에 맞춰 작은 여정을 시작해요."
+                    subtitle: "도어가 휴식의 방향을 제안합니다."
+                )
+                
+                // 페이지
+                OnboardingPageView(
+                    imageName: "onboarding03",
+                    title: "자유롭게 걸어보세요.",
+                    subtitle: "도어를 연 동안엔 망설일 필요 없어요."
                 )
                 
             }
