@@ -74,6 +74,7 @@ struct TimerView: View {
                             isActive: $isActive
 
                         ){}
+                            .navigationBarHidden(true)
                     ))
             
 

@@ -14,7 +14,7 @@ struct InhaleView: View {
     @State private var currentText = 0
 
     var body: some View {
-        NavigationView {
+        
             GeometryReader { geometry in
                 ZStack {
                     
@@ -66,12 +66,12 @@ struct InhaleView: View {
                         }
                         NavigationLink(destination: CompleteView(), isActive: $isActive) {
                             
-                        }
+                        }.navigationBarHidden(true)
                     }
                         .frame(width: geometry.size.width, height: geometry.size.height)
                 }
             }
-        }
+        
             
             .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 60.0) {

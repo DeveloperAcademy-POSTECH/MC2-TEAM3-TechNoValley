@@ -12,7 +12,7 @@ struct CompleteView: View {
 
     var body: some View {
 
-        NavigationView {
+        
             ZStack {
                 Color(hex: "252526")
                     .ignoresSafeArea()
@@ -38,14 +38,14 @@ struct CompleteView: View {
                     Spacer()
                     NavigationLink(destination: HomeView(), isActive: $isActive) {
                         
-                    }
+                    }.navigationBarHidden(true)
                 }
             }
             
-        }
+        
             .navigationBarHidden(true)
             .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 300.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                 isActive = true
             }
         }
