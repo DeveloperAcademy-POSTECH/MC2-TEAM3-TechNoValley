@@ -2,7 +2,7 @@ import SwiftUI
 
 struct RollingText: View {
     // MARK: Text Properties
-    var font: Font = .largeTitle
+    var font: Font = .custom("esamanruOTFLight", size: 35)
     var weight: Font.Weight = . regular
     // MARK: Animation properties
     @Binding var value: Int

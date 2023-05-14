@@ -39,119 +39,144 @@ struct StepView: View {
     var body: some View {
         
         
-        
-        VStack {
+        ZStack {
             
-            HStack {
-                Spacer()
-                TimerView()
-                    .padding(20)
-            }
+            Color(red: 0.15, green: 0.15, blue: 0.15)
+                .ignoresSafeArea()
             
-            Spacer()
+            TimerView(timeRemaining: 300)
+                .offset(x:130, y:-330)
+            //지구 타이머 오프셋 사용
             
-            HStack(spacing:-3.2){
+            
                 
-                RollingText(value: $stepsCount3)
-                    .font(.title)
+            VStack(spacing: 70) {
+                
+
+                
+                
+                Spacer()
+
+                
+                
+                Spacer()
+                
+                HStack(spacing:-3.2){
+                    
+                    RollingText(value: $stepsCount3)
+                        
+                        .frame(width: 36, height: 80)
+                        .padding()
+                        .border(Color(hex: "FFBC00"), width: 3.5)
+                        .cornerRadius(3)
+                        .foregroundColor(.white)
+
+                    
+                    RollingText(value: $stepsCount2)
+                        
+                        .frame(width: 36, height: 80)
+                        .padding()
+                        .border(Color(hex: "FFBC00"), width: 3.5)
+                        .foregroundColor(.white)
+                    
+                    RollingText(value: Binding(get: { self.stepsCount % 10 },
+                                               set: { self.stepsCount = $0 }))
+                    
                     .frame(width: 36, height: 80)
                     .padding()
                     .border(Color(hex: "FFBC00"), width: 3.5)
                     .cornerRadius(3)
-
-                
-                RollingText(value: $stepsCount2)
-                    .font(.title)
-                    .frame(width: 36, height: 80)
-                    .padding()
-                    .border(Color(hex: "FFBC00"), width: 3.5)
-                
-                RollingText(value: Binding(get: { self.stepsCount % 10 },
-                                           set: { self.stepsCount = $0 }))
-                .font(.title)
-                .frame(width: 36, height: 80)
-                .padding()
-                .border(Color(hex: "FFBC00"), width: 3.5)
-                .cornerRadius(3)
-                
-//                RoundedRectangle(cornerRadius: 10)
-//                    .frame(width: 51, height: 51)
-//                    .foregroundColor(Color(hex: "252526"))
-//                    .overlay(Text("\(timeMinutes)")
-//                        .font(.largeTitle)
-//                        .foregroundColor(.black))
-//                    .clipShape(RoundedRectangle(cornerRadius: 10))
-//                    .overlay(
-//                        RoundedRectangle(cornerRadius: 10)
-//                            .stroke(Color(hex: "FFBC00"), lineWidth: 3.5)
-//                    )
-                
-            }
-            .onAppear() {
-                // CMMotionActivityManager
-                
-                
-                // CMPedometer
-                if CMPedometer.isStepCountingAvailable() {
-                    pedometer.startUpdates(from: Date()) { pedometerData, error in
-                        if let pedometerData = pedometerData, error == nil {
-                            DispatchQueue.main.async {
-                                let newSteps = pedometerData.numberOfSteps.intValue
-                                stepDiff = newSteps - self.stepsCount
-                                // 이전 값 빼고 새로운 스텝 수 차이 계산
-                                
-                                
-                                self.stepsCount += stepDiff // 차이만큼만 더해 업데이트
-                                stepDiffSum += stepDiff
-                                updateSteps()
-                                print(newSteps)
-                                print(stepDiff) // 차이값
-                                print(self.stepsCount)
-                                
-                                
+                    .foregroundColor(.white)
+                    
+    //                RoundedRectangle(cornerRadius: 10)
+    //                    .frame(width: 51, height: 51)
+    //                    .foregroundColor(Color(hex: "252526"))
+    //                    .overlay(Text("\(timeMinutes)")
+    //                        .font(.largeTitle)
+    //                        .foregroundColor(.black))
+    //                    .clipShape(RoundedRectangle(cornerRadius: 10))
+    //                    .overlay(
+    //                        RoundedRectangle(cornerRadius: 10)
+    //                            .stroke(Color(hex: "FFBC00"), lineWidth: 3.5)
+    //                    )
+                    
+                }
+                .onAppear() {
+                    // CMMotionActivityManager
+                    
+                    
+                    // CMPedometer
+                    if CMPedometer.isStepCountingAvailable() {
+                        pedometer.startUpdates(from: Date()) { pedometerData, error in
+                            if let pedometerData = pedometerData, error == nil {
+                                DispatchQueue.main.async {
+                                    let newSteps = pedometerData.numberOfSteps.intValue
+                                    stepDiff = newSteps - self.stepsCount
+                                    // 이전 값 빼고 새로운 스텝 수 차이 계산
+                                    
+                                    
+                                    self.stepsCount += stepDiff // 차이만큼만 더해 업데이트
+                                    stepDiffSum += stepDiff
+                                    updateSteps()
+                                   
+                                    
+                                    
+                                }
                             }
                         }
                     }
                 }
+                
+                    
+                
+                
+                switch stepDiffSum {
+                case 0...100:
+                    Text(StringList[Int.random(in: 0...2)])
+                        .foregroundColor(Color(hex: "D8D8D8"))
+                        .font(.custom("esamanruOTFLight", size: 15))
+                case 101...200:
+                    Text(StringList[Int.random(in: 3...5)])
+                        .foregroundColor(Color(hex: "D8D8D8"))
+                        .font(.custom("esamanruOTFLight", size: 15))
+                    
+                case 201...300:
+                    Text(StringList[Int.random(in: 6...7)])
+                        .foregroundColor(Color(hex: "D8D8D8"))
+                        .font(.custom("esamanruOTFLight", size: 15))
+                case 301...400:
+                    Text(StringList[Int.random(in: 8...9)])
+                        .foregroundColor(Color(hex: "D8D8D8"))
+                        .font(.custom("esamanruOTFLight", size: 15))
+                case 401...500:
+                    Text(StringList[Int.random(in: 10...11)])
+                        .foregroundColor(Color(hex: "D8D8D8"))
+                        .font(.custom("esamanruOTFLight", size: 15))
+                case 501...600:
+                    Text(StringList[Int.random(in: 12...13)])
+                        .foregroundColor(Color(hex: "D8D8D8"))
+                        .font(.custom("esamanruOTFLight", size: 15))
+                case 601...800:
+                    Text(StringList[Int.random(in: 14...15)])
+                        .foregroundColor(Color(hex: "D8D8D8"))
+                        .font(.custom("esamanruOTFLight", size: 15))
+                case 801...999:
+                    Text(StringList[Int.random(in: 16...17)])
+                        .foregroundColor(Color(hex: "D8D8D8"))
+                        .font(.custom("esamanruOTFLight", size: 15))
+                default:
+                    Text("오류")
+                }
+                Spacer()
+            
+                Spacer()
+                
+                
             }
-            Spacer()
-            
-            switch stepsCount {
-            case 0...100:
-                Text(StringList[Int.random(in: 0...2)])
-                    .foregroundColor(Color(hex: "D8D8D8"))
-            case 101...200:
-                Text(StringList[Int.random(in: 3...5)])
-                    .foregroundColor(Color(hex: "D8D8D8"))
-            case 201...300:
-                Text(StringList[Int.random(in: 6...7)])
-                    .foregroundColor(Color(hex: "D8D8D8"))
-            case 301...400:
-                Text(StringList[Int.random(in: 8...9)])
-                    .foregroundColor(Color(hex: "D8D8D8"))
-            case 401...500:
-                Text(StringList[Int.random(in: 10...11)])
-                    .foregroundColor(Color(hex: "D8D8D8"))
-            case 501...600:
-                Text(StringList[Int.random(in: 12...13)])
-                    .foregroundColor(Color(hex: "D8D8D8"))
-            case 601...800:
-                Text(StringList[Int.random(in: 14...15)])
-                    .foregroundColor(Color(hex: "D8D8D8"))
-            case 801...999:
-                Text(StringList[Int.random(in: 16...17)])
-                    .foregroundColor(Color(hex: "D8D8D8"))
-            default:
-                Text("오류")
-            }
-            Spacer()
-            
-            Spacer()
-            
-            Spacer()
-            
-            
         }
+        
+        
+        
         
         
     }
@@ -174,6 +199,6 @@ struct StepView: View {
 struct StepView_Previews: PreviewProvider {
     static var previews: some View {
         StepView()
-        
+        TimerView(timeRemaining: 300)
     }
 }
