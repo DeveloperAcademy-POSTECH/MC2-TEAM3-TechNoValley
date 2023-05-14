@@ -17,13 +17,13 @@ extension CGSize {
     static var inactiveThumbSize:CGSize {
         return CGSize(width: 50, height: 50)
     }
-
+    
     static var activeThumbSize:CGSize {
         return CGSize(width: 85, height: 50)
     }
-
+    
     static var trackSize:CGSize {
-        return CGSize(width: 280, height: 50)
+        return CGSize(width: 310, height: 50)
     }
 }
 
@@ -59,58 +59,57 @@ struct HomeView: View {
     //    let view = HomeView()
     
     @State var isShowingCompassView = false
+    @State var isOnboardingTabViewPresented = false
     
     var body: some View {
-        
         GeometryReader { geometry in
             ZStack {
                 Color(red: 0.15, green: 0.15, blue: 0.15)
                     .ignoresSafeArea()
-                VStack {
-                  
-                    HStack {
-                        
-                        
-                        
-                        Button {
-                            isActive = true
-                            isFirstLaunching = true
-                        } label: {
-                            RoundedRectangle(cornerRadius: 5)
-                                .frame(width: geometry.size.width * 0.1, height: geometry.size.width * 0.1)
-                                .foregroundColor(surgeonOrange)
-                                
-                        }
-                        
-                    }
-                  
-            
-
-                    Spacer()
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 5)
-                            .frame(width: geometry.size.width * 0.8, height: geometry.size.width * 0.13)
-                            .foregroundColor(slideGray)
-                    }
+                ZStack {
                     ZStack {
-                        RoundedRectangle(cornerRadius: 5)
-                            .frame(width: geometry.size.width * 0.13, height: geometry.size.width * 0.13)
-                            .foregroundColor(surgeonOrange)
-                            
+                        Button(action: {
+                            isOnboardingTabViewPresented.toggle()
+                            isFirstLaunching = true
+                        }) {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 5)
+                                Text("?")
+                                    .font(.custom("esamanruOTFLight", size: 18))
+                                    .foregroundColor(glowWhite)
+                            }
+                        }
+                        .frame(width: geometry.size.width * 0.1, height: geometry.size.width * 0.1)
+                        .offset(x : geometry.size.width * 0.36, y : -geometry.size.height * 0.45)
+                        .foregroundColor(surgeonOrange)
                     }
-                    .offset(x: getDragOffsetX(), y: 0)
-                    .gesture(
-                        DragGesture()
-                            .onChanged({ value in self.handleDragChanged(value) })
-                            .onEnded({ value in
-                                self.handleDragEnded()
-                                if value.translation.width > 100 { // Replace with your own threshold value
-                                    self.isShowingCompassView = true
-                                }
-                            })
-                        
-                    )
-                Spacer()
+                    .sheet(isPresented: $isOnboardingTabViewPresented) {
+                        OnboardingTabAgainView()
+                    }
+                    .border(.white)
+                    Spacer()
+                    
+                    //트랙
+                    RoundedRectangle(cornerRadius: 5)
+                        .frame(width: geometry.size.width * 0.8, height: geometry.size.width * 0.13)
+                        .foregroundColor(slideGray)
+                    
+                    //슬라이드 바 버튼
+                    RoundedRectangle(cornerRadius: 5)
+                        .frame(width: geometry.size.width * 0.13, height: geometry.size.width * 0.13)
+                        .foregroundColor(surgeonOrange)
+                        .offset(x: getDragOffsetX(), y: 0)
+                        .gesture(
+                            DragGesture()
+                                .onChanged({ value in self.handleDragChanged(value) })
+                                .onEnded({ value in
+                                    self.handleDragEnded()
+                                    if value.translation.width > 100 { // Replace with your own threshold value
+                                        self.isShowingCompassView = true
+                                    }
+                                })
+                        )
+                    Spacer()
                 }
             }
             .background(
@@ -118,18 +117,8 @@ struct HomeView: View {
                 }.navigationBarHidden(true)
             )
         }
+        .navigationBarHidden(true)
     }
-    // MARK: - Haptic feedback
-    private func indicateCanLiftFinger() -> Void {
-        let generator = UIImpactFeedbackGenerator(style: .medium)
-        generator.impactOccurred()
-    }
-    
-    private func indicateSwipeWasSuccessful() -> Void {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
-    }
-    
     
     // MARK: - Helpers
     private func getDragOffsetX() -> CGFloat {
@@ -154,7 +143,8 @@ struct HomeView: View {
         if didReachTarget {
             // only trigger once!
             if !self.isEnough {
-                self.indicateCanLiftFinger()
+                HapticManager.instance.notification(type: .success)
+                HapticManager.instance.impact(style: .heavy)
             }
             self.isEnough = true
         }
@@ -170,7 +160,8 @@ struct HomeView: View {
             
             // the outside world should be able to know
             if nil != self.actionSuccess {
-                self.indicateSwipeWasSuccessful()
+                HapticManager.instance.notification(type: .success)
+                HapticManager.instance.impact(style: .heavy)
                 
                 // wait and give enough time for animation to finish
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
