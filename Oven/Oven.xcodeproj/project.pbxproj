@@ -11,6 +11,7 @@
 		032D579E2A0CC1930091E1A5 /* esamanruOTFLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 032D579D2A0CC1930091E1A5 /* esamanruOTFLight.otf */; };
 		032D57A22A0CC5F20091E1A5 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D57A12A0CC5F20091E1A5 /* Font+.swift */; };
 		032D57AE2A0FDC0C0091E1A5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D57AD2A0FDC0C0091E1A5 /* Color.swift */; };
+		032D57B42A1121510091E1A5 /* OnboardingTabAgainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D57B32A1121510091E1A5 /* OnboardingTabAgainView.swift */; };
 		0338D64E2A08ED3C0009D259 /* CompassHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0338D64D2A08ED3C0009D259 /* CompassHeading.swift */; };
 		03FB63002A056A5E000E94A6 /* OvenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB62FF2A056A5E000E94A6 /* OvenApp.swift */; };
 		03FB63022A056A5E000E94A6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63012A056A5E000E94A6 /* HomeView.swift */; };
@@ -59,6 +60,7 @@
 		032D579D2A0CC1930091E1A5 /* esamanruOTFLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = esamanruOTFLight.otf; sourceTree = "<group>"; };
 		032D57A12A0CC5F20091E1A5 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		032D57AD2A0FDC0C0091E1A5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		032D57B32A1121510091E1A5 /* OnboardingTabAgainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabAgainView.swift; sourceTree = "<group>"; };
 		0338D64D2A08ED3C0009D259 /* CompassHeading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassHeading.swift; sourceTree = "<group>"; };
 		03FB62FC2A056A5E000E94A6 /* Oven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03FB62FF2A056A5E000E94A6 /* OvenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvenApp.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				C229454E2A08DAC70006C65B /* OnboardingLastPageView.swift */,
 				C21EC3652A0B7E5A007CD955 /* OnboardingPermissionView.swift */,
 				C229454A2A08D9DF0006C65B /* OnboardingTabView.swift */,
+				032D57B32A1121510091E1A5 /* OnboardingTabAgainView.swift */,
 			);
 			path = OnboardingView;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				C229454B2A08D9DF0006C65B /* OnboardingTabView.swift in Sources */,
 				032D57AE2A0FDC0C0091E1A5 /* Color.swift in Sources */,
 				03FB63002A056A5E000E94A6 /* OvenApp.swift in Sources */,
+				032D57B42A1121510091E1A5 /* OnboardingTabAgainView.swift in Sources */,
 				032D57A22A0CC5F20091E1A5 /* Font+.swift in Sources */,
 				03FB63362A05C9CA000E94A6 /* CompassView.swift in Sources */,
 				03FB63342A05C9BF000E94A6 /* TimerView.swift in Sources */,
@@ -543,7 +547,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Oven/Preview Content\"";
-				DEVELOPMENT_TEAM = HLS34A9223;
+				DEVELOPMENT_TEAM = RFZY2ACQ74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Oven/Info.plist;
@@ -574,7 +578,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Oven/Preview Content\"";
-				DEVELOPMENT_TEAM = HLS34A9223;
+				DEVELOPMENT_TEAM = RFZY2ACQ74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Oven/Info.plist;
