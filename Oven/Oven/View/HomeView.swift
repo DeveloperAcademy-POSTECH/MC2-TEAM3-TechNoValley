@@ -59,7 +59,7 @@ struct HomeView: View {
     //    let view = HomeView()
     
     @State var isShowingCompassView = false
-    @State var isOnboardingTabViewPresented = false
+    @State var isOnboardingTabAgainViewPresented = false
     
     var body: some View {
         GeometryReader { geometry in
@@ -69,7 +69,7 @@ struct HomeView: View {
                 ZStack {
                     ZStack {
                         Button(action: {
-                            isOnboardingTabViewPresented.toggle()
+                            isOnboardingTabAgainViewPresented.toggle()
 //                            isFirstLaunching = true
                         }) {
                             ZStack {
@@ -83,7 +83,7 @@ struct HomeView: View {
                         .offset(x : geometry.size.width * 0.36, y : -geometry.size.height * 0.45)
                         .foregroundColor(surgeonOrange)
                     }
-                    .sheet(isPresented: $isOnboardingTabViewPresented) {
+                    .sheet(isPresented: $isOnboardingTabAgainViewPresented) {
                         OnboardingTabAgainView()
                     }
                     .border(.white)
