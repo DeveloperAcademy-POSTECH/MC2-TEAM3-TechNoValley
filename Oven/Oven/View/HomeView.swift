@@ -57,7 +57,6 @@ struct HomeView: View {
     @State var isShowingCompassView = false
     
     var body: some View {
-        
         GeometryReader { geometry in
             ZStack {
                 Color(red: 0.15, green: 0.15, blue: 0.15)
@@ -101,19 +100,9 @@ struct HomeView: View {
                 }.navigationBarHidden(true)
             )
         }
+        .navigationBarHidden(true)
     }
-    // MARK: - Haptic feedback
-    private func indicateCanLiftFinger() -> Void {
-        let generator = UIImpactFeedbackGenerator(style: .medium)
-        generator.impactOccurred()
-    }
-    
-    private func indicateSwipeWasSuccessful() -> Void {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
-    }
-    
-    
+
     // MARK: - Helpers
     private func getDragOffsetX() -> CGFloat {
         // should not be able to drag outside of the track area
@@ -137,7 +126,8 @@ struct HomeView: View {
         if didReachTarget {
             // only trigger once!
             if !self.isEnough {
-                self.indicateCanLiftFinger()
+                HapticManager.instance.notification(type: .success)
+                HapticManager.instance.impact(style: .heavy)
             }
             self.isEnough = true
         }
@@ -153,7 +143,8 @@ struct HomeView: View {
             
             // the outside world should be able to know
             if nil != self.actionSuccess {
-                self.indicateSwipeWasSuccessful()
+                HapticManager.instance.notification(type: .success)
+                HapticManager.instance.impact(style: .heavy)
                 
                 // wait and give enough time for animation to finish
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
