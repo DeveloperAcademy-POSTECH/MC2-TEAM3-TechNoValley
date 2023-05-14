@@ -13,7 +13,7 @@ struct SplashView: View {
     @AppStorage("_isFirstLaunching") var isFirstLaunching: Bool = true // added state for isFirstLaunching
     
     var body: some View {
-        NavigationView {
+        
             GeometryReader { geometry in
                 ZStack {
                     Color(red: 0.15, green: 0.15, blue: 0.15)
@@ -53,7 +53,7 @@ struct SplashView: View {
                                     }
                                 }, isActive: $isActive){
                                 })
-        }
+        
         .navigationBarHidden(true)
     }
 }
