@@ -16,16 +16,20 @@ struct OnboardingPageView: View {
         GeometryReader { geometry in
             ZStack {
                 VStack {
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .center) {
                         Text(title)
                             .font(.largeTitle)
+                            .foregroundColor(.white)
                             .fontWeight(.bold)
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 0))
+                        
                         Text(subtitle)
+                            .font(.subheadline)
+                            .foregroundColor(.white)
                             .fontWeight(.medium) //폰트의 두께
                     }
                         .padding(EdgeInsets(top: 40, leading: 40, bottom: 40, trailing: 40))
-                        .frame(width: geometry.size.width, height: geometry.size.height / 5, alignment: .topLeading)
+                        .frame(width: geometry.size.width, height: geometry.size.height / 5, alignment: .top)
 
                     Image(imageName)
                         .frame(width: geometry.size.width, alignment: .center)
