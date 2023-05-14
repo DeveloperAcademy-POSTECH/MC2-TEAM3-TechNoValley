@@ -21,7 +21,6 @@
 		03FB631D2A056A5F000E94A6 /* OvenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB631C2A056A5F000E94A6 /* OvenUITestsLaunchTests.swift */; };
 		03FB632A2A05C94D000E94A6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63292A05C94D000E94A6 /* SplashView.swift */; };
 		03FB632C2A05C956000E94A6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB632B2A05C956000E94A6 /* OnboardingView.swift */; };
-		03FB632E2A05C993000E94A6 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB632D2A05C993000E94A6 /* LocationView.swift */; };
 		03FB63302A05C99B000E94A6 /* InhaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB632F2A05C99B000E94A6 /* InhaleView.swift */; };
 		03FB63322A05C9A4000E94A6 /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63312A05C9A4000E94A6 /* CompleteView.swift */; };
 		03FB63342A05C9BF000E94A6 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB63332A05C9BF000E94A6 /* TimerView.swift */; };
@@ -73,7 +72,6 @@
 		03FB631C2A056A5F000E94A6 /* OvenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvenUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		03FB63292A05C94D000E94A6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		03FB632B2A05C956000E94A6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		03FB632D2A05C993000E94A6 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		03FB632F2A05C99B000E94A6 /* InhaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InhaleView.swift; sourceTree = "<group>"; };
 		03FB63312A05C9A4000E94A6 /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
 		03FB63332A05C9BF000E94A6 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 				03FB63292A05C94D000E94A6 /* SplashView.swift */,
 				F3F057C72A0BA2C300F3715C /* SplashLottieView.swift */,
 				03FB63012A056A5E000E94A6 /* HomeView.swift */,
-				03FB632D2A05C993000E94A6 /* LocationView.swift */,
 				03FB632F2A05C99B000E94A6 /* InhaleView.swift */,
 				03FB63312A05C9A4000E94A6 /* CompleteView.swift */,
 				03FB63332A05C9BF000E94A6 /* TimerView.swift */,
@@ -377,7 +374,6 @@
 				C229454F2A08DAC70006C65B /* OnboardingLastPageView.swift in Sources */,
 				0338D64E2A08ED3C0009D259 /* CompassHeading.swift in Sources */,
 				F3F057C82A0BA2C300F3715C /* SplashLottieView.swift in Sources */,
-				03FB632E2A05C993000E94A6 /* LocationView.swift in Sources */,
 				03FB63302A05C99B000E94A6 /* InhaleView.swift in Sources */,
 				C229454B2A08D9DF0006C65B /* OnboardingTabView.swift in Sources */,
 				032D57AE2A0FDC0C0091E1A5 /* Color.swift in Sources */,
