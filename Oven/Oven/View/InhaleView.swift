@@ -10,7 +10,7 @@ import SwiftUI
 struct InhaleView: View {
     @State private var isActive: Bool = false
     @State private var isScaled = false
-    let texts = ["숨을 천천히 들이쉬고", "내쉬어 보세요.", "숨을 천천히 들이쉬고", "내쉬어 보세요.", "", "", "시원한 공기가\n몸 속으로 들어오고 있나요?", "의식하며 호흡을 하는 것이 중요해요.", "", "", "", "", "산책은 스트레스를 해소하는데\n도움이 된다고 해요.", "매일 산책하는 습관을 들여보세요.", "", "", "", "", "크게 호흡하는 것도\n잊지 말고요!", "이번 휴식으로 마음이\n조금은 편해졌기를 바라요.", "이번 휴식으로 마음이\n조금은 편해졌기를 바라요."]
+    let texts = ["숨을 천천히 들이쉬고", "내쉬어 보세요.", "숨을 천천히 들이쉬고", "내쉬어 보세요.", "", "", "시원한 공기가\n몸 속으로 들어오고 있나요?", "의식하며 호흡을 하는 것이 중요해요.", "", "", "", "", "산책은 스트레스를 해소하는데\n도움이 된다고 해요.", "매일 산책하는 습관을 들여보세요.", "", "", "", "", "크게 호흡하는 것도\n잊지 말고요!", "이번 휴식으로 마음이\n조금은 편해졌기를 바라요.", "이번 휴식으로 마음이\n조금은 편해졌기를 바라요.", ""]
     @State private var currentText = 0
 
     var body: some View {
@@ -74,6 +74,8 @@ struct InhaleView: View {
         
             
             .onAppear {
+                HapticManager.instance.notification(type: .success)
+                HapticManager.instance.impact(style: .heavy)
             DispatchQueue.main.asyncAfter(deadline: .now() + 60.0) {
                 isActive = true
             }
