@@ -17,11 +17,11 @@ extension CGSize {
     static var inactiveThumbSize:CGSize {
         return CGSize(width: 50, height: 50)
     }
-    
+
     static var activeThumbSize:CGSize {
         return CGSize(width: 85, height: 50)
     }
-    
+
     static var trackSize:CGSize {
         return CGSize(width: 280, height: 50)
     }
@@ -58,52 +58,43 @@ struct HomeView: View {
     
     var body: some View {
         
-        
         GeometryReader { geometry in
             ZStack {
                 Color(red: 0.15, green: 0.15, blue: 0.15)
                     .ignoresSafeArea()
-                
-                NavigationLink(destination:OnboardingView()){
-                    Image(systemName: "questionmark.app.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40, height: 40)
-                        .foregroundColor(Color(red: 255, green: 188, blue: 0))
-                        .frame(width: thumbSize.width * 10, height: thumbSize.height)
+                VStack {
+                    NavigationLink(destination:OnboardingView()){
+                        RoundedRectangle(cornerRadius: 5)
+                            .frame(width: geometry.size.width * 0.1, height: geometry.size.width * 0.1)
+                            .offset(x : geometry.size.width * 0.35)
+                            .foregroundColor(surgeonOrange)
+                    }
+                    Spacer()
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 5)
+                            .frame(width: geometry.size.width * 0.8, height: geometry.size.width * 0.13)
+                            .foregroundColor(slideGray)
+                    }
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 5)
+                            .frame(width: geometry.size.width * 0.13, height: geometry.size.width * 0.13)
+                            .foregroundColor(surgeonOrange)
+                            
+                    }
+                    .offset(x: getDragOffsetX(), y: 0)
+                    .gesture(
+                        DragGesture()
+                            .onChanged({ value in self.handleDragChanged(value) })
+                            .onEnded({ value in
+                                self.handleDragEnded()
+                                if value.translation.width > 100 { // Replace with your own threshold value
+                                    self.isShowingCompassView = true
+                                }
+                            })
+                        
+                    )
+                Spacer()
                 }
-                .offset(x:130, y:-330)
-                
-                ZStack{
-                    RoundedRectangle(cornerRadius: 5)
-                        .frame(width: trackSize.width, height: trackSize.height)
-                        .foregroundColor(Color.black).blendMode(.overlay).opacity(0.5)
-                }
-                ZStack {
-                    RoundedRectangle(cornerRadius: 5)
-                        .frame(width: thumbSize.width, height: thumbSize.height)
-                        .foregroundColor(Color(red: 255, green: 188, blue: 0))
-                    Image(systemName: "arrow.right")
-                        .foregroundColor(Color.black)
-                }
-                .offset(x: getDragOffsetX(), y: 0)
-                .animation(Animation.spring(response: 0.2, dampingFraction: 0.8))
-                //                    .gesture(
-                //                        DragGesture()
-                //                            .onChanged({ value in self.handleDragChanged(value) })
-                //                            .onEnded({ _ in self.handleDragEnded() })
-                //                    )
-                .gesture(
-                    DragGesture()
-                        .onChanged({ value in self.handleDragChanged(value) })
-                        .onEnded({ value in
-                            self.handleDragEnded()
-                            if value.translation.width > 100 { // Replace with your own threshold value
-                                self.isShowingCompassView = true
-                            }
-                        })
-                    
-                )
             }
             .background(
                 NavigationLink(destination: CompassView(), isActive: $isShowingCompassView) {
