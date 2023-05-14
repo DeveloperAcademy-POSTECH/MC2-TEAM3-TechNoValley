@@ -7,24 +7,11 @@
 
 import SwiftUI
 
-//class AppDelegate: UIResponder, UIApplicationDelegate {
-//    var window: UIWindow?
-//
-//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        // Override point for customization after application launch.
-//
-//        // TODO. 스플래시 딜레이 3초
-//        Thread.sleep(forTimeInterval: 3.0)
-//
-//        return true
-//    }
-//}
-
 struct SplashView: View {
     @State private var isAnimating = true
     @State private var isActive = false // added state for NavigationLink
     @State private var isFirstLaunching = true // added state for isFirstLaunching
-
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -34,36 +21,37 @@ struct SplashView: View {
                     Spacer()
                     SplashLottieView(jsonName: "Logo")
                         .frame(width: geometry.size.width * 0.5, height: geometry.size.height * 0.5)
+                        .offset(y : -geometry.size.height * 0.05)
                     Spacer()
                     Text("v1.0-a")
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(red: 0.67, green: 0.67, blue: 0.67))
+                        .font(.custom("AppleSDGothicNeo-Regular", size: 14))
+                        .offset(y : -geometry.size.height * 0.05)
                     Text("Created by TechNoValley")
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(red: 0.67, green: 0.67, blue: 0.67))
+                        .font(.custom("AppleSDGothicNeo-Regular", size: 14))
+                        .offset(y : -geometry.size.height * 0.05)
                 }
             }
         }
-//        .onAppear {
-//                    // activate NavigationLink after 3 second delay
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-//                    isActive = true
-//                    isFirstLaunching = false
-//                    }
-//                }
+        .onAppear {
+            // activate NavigationLink after 3 second delay
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                isActive = true
+                isFirstLaunching = false
+            }
+        }
         .background(
             // NavigationLink to next page
             NavigationLink(destination:
                 Group {
                     if isFirstLaunching {
-                        OnboardingView()
-                    } else {
-                        HomeView()
-                    }
-                },
-                isActive: $isActive) {
-                EmptyView()
-            }
-            .hidden()
-        )
+                            OnboardingView()
+                        } else {
+                            HomeView()
+                        }
+            }, isActive: $isActive){
+        })
     }
 }
 
