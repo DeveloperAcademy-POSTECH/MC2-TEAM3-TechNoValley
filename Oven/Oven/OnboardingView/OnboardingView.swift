@@ -13,7 +13,6 @@ struct OnboardingView: View {
     @AppStorage("_isFirstLaunching") var isFirstLaunching: Bool = true
 
     var body: some View {
-        
             ZStack {
                 Color(red: 0.15, green: 0.15, blue: 0.15)
                     .ignoresSafeArea()
@@ -21,7 +20,6 @@ struct OnboardingView: View {
                     .fullScreenCover(isPresented: $isFirstLaunching) {
                         OnboardingTabView(isFirstLaunching: $isFirstLaunching)
                     }
-            
             .navigationBarHidden(true)
         }
     }
