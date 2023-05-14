@@ -22,15 +22,18 @@ struct CompassView: View {
                 VStack(spacing: geometry.size.height * 0.1) {
                     Spacer()
                     
+                    //방향값의 위치에 따라 텍스트 변경
                     Text(isMiddle ? "잘하셨어요!": "이쪽이에요")
                         .foregroundColor(glowWhite)
                         .font(.custom("esamanruOTFLight", size: 21))
-    
+                    
                     ZStack{
+                        //배경 사각형
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(heavyGray, lineWidth: 4)
                             .frame(width: geometry.size.width * 0.3, height: geometry.size.width * 0.3)
                         
+                        //배경 선
                         Path { path in
                             path.move(to: CGPoint(x: geometry.size.width * 0.5, y: 0))
                             path.addLine(to: CGPoint(x: geometry.size.width * 0.5, y: geometry.size.width * 0.3))
@@ -39,6 +42,7 @@ struct CompassView: View {
                         .frame(height: geometry.size.width * 0.3)
                         
                         ZStack {
+                            //나침반 도움 화살표
                             if isRight {
                                 Image(systemName: "arrowtriangle.left.fill")
                                     .foregroundColor(surgeonOrange)
@@ -52,8 +56,10 @@ struct CompassView: View {
                             
                             // 나침반 바늘
                             Path { path in
+                                //x좌표값 랜덤생성
                                 var xCoordinate = difference/360 * geometry.size.width
                                 
+                                //좌표값 수정
                                 switch xCoordinate {
                                 case ..<0:
                                     xCoordinate = xCoordinate + geometry.size.width
@@ -63,30 +69,40 @@ struct CompassView: View {
                                     break
                                 }
                                 
-                                if xCoordinate < geometry.size.width/2 {
-                                    isLeft = true
-                                    isRight = false
-                                }
-                                else if xCoordinate > geometry.size.width/2 {
-                                    isRight = true
-                                    isLeft = false
-                                }
-                                else {
-                                    isRight = false
-                                    isLeft = false
-                                }
-                                
-                                if !isMiddle {
-                                    if Int(xCoordinate) == Int(geometry.size.width/2) {
-                                        isMiddle.toggle()
-                                        HapticManager.instance.notification(type: .success)
-                                        HapticManager.instance.impact(style: .heavy)
-                                        startTimer()
+                                //나침반 도움 화살표 위치 인식
+                                DispatchQueue.main.async {
+                                    if xCoordinate < geometry.size.width/2 {
+                                        isLeft = true
+                                        isRight = false
+                                    }
+                                    else if xCoordinate > geometry.size.width/2 {
+                                        isRight = true
+                                        isLeft = false
+                                    }
+                                    else {
+                                        isRight = false
+                                        isLeft = false
                                     }
                                 }
+                                
+                                //중앙값일 때 햅틱, 타이머 시작
+                                DispatchQueue.main.async {
+                                    if !isMiddle {
+                                        if Int(xCoordinate) == Int(geometry.size.width/2) {
+                                            isMiddle.toggle()
+                                            HapticManager.instance.notification(type: .success)
+                                            HapticManager.instance.impact(style: .heavy)
+                                            startTimer()
+                                        }
+                                    }
+                                }
+                                
+                                //중앙값일 때 선 고정
                                 if isMiddle {
                                     xCoordinate = geometry.size.width/2
                                 }
+                                
+                                //위치값에 따라 선 그리기
                                 path.move(to: CGPoint(x: xCoordinate, y: 0))
                                 path.addLine(to: CGPoint(x: xCoordinate, y: geometry.size.width * 0.3))
                             }
@@ -104,6 +120,8 @@ struct CompassView: View {
                     NavigationLink(destination: StepView(), isActive: $isShowingTimerView) {
                     }
                 )
+                
+                //중앙값일 때 텍스트 변경
                 if isMiddle {
                     Text("이제 걸어볼까요?")
                         .font(.custom("esamanruOTFLight", size: 14))
@@ -112,11 +130,14 @@ struct CompassView: View {
                 }
             }
         }
+        .navigationBarHidden(true)
     }
     
+    //방향값이 중앙일 때 타이머 시작
     private func startTimer() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             isShowingTimerView = true
+            compassHeading.stopUpdatingHeading()
         }
     }
 }
