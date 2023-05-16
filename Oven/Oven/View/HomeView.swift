@@ -89,10 +89,16 @@ struct HomeView: View {
                     .border(.white)
                     Spacer()
                     
-                    //트랙
-                    RoundedRectangle(cornerRadius: 5)
-                        .frame(width: geometry.size.width * 0.8, height: geometry.size.width * 0.13)
-                        .foregroundColor(slideGray)
+                    //트랙 //수정할 부분
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 5)
+                            .frame(width: geometry.size.width * 0.8, height: geometry.size.width * 0.13)
+                            .foregroundColor(slideGray)
+                        Text("밀어서 5분 쉬기")
+                            .foregroundColor(Color(hex: "AAAAAA"))
+                            .font(.custom("esamanruOTFLight", size: 20))
+                    }
+
                     
                     //슬라이드 바 버튼
                     RoundedRectangle(cornerRadius: 5)

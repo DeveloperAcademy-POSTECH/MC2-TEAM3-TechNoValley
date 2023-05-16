@@ -13,6 +13,11 @@ struct TimerView: View {
     @State var timeMinutes = 5
     @State var timeplus:Double = 0
     @State private var isActive = false
+    @State var timeplus2:Double = 0
+    
+    
+    
+    //타이머가 현재 5분 주기인데 1분 주기로 바꿔주기
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -34,12 +39,19 @@ struct TimerView: View {
             Rectangle()
                 .fill(Color(hex: "FFBC00"))//252526
                 .frame(width: 38, height: 38)
-                .scaleEffect(x: CGFloat(timeplus / 300), y: 1, anchor: .leading)
+                .scaleEffect(x: CGFloat(timeplus2 / 60), y: 1, anchor: .leading)
+            //1분이 되면 사라지게
                 .onReceive(timer) { _ in
                     if timeplus >= 300 && timeplus <= 999{
                         timer.upstream.connect().cancel() // 타이머 중지
+                        
                     } else {
                         timeplus += 1
+                        timeplus2 += 1
+                        
+                    }
+                    if timeplus2 == 60 {
+                        timeplus2 = 0
                     }
                 }
             
