@@ -3,7 +3,7 @@ import CoreMotion
 
 struct StepView: View {
     
-    // CMMotionActivityManager
+    // CMMotionActivityManagerd
     private let activityManager = CMMotionActivityManager()
     
     // CMPedometer
