@@ -13,6 +13,9 @@ struct StepView: View {
     @State var stepsCount3: Int = 0
     @State var stepDiff: Int = 0
     @State var stepDiffSum: Int = 0
+    @State var firstText: String = "5분간의 산책을 시작해봐요"
+    
+    
     
     
     @State var StringList: [String] = ["시작은 언제나 첫 걸음 부터",
@@ -35,6 +38,7 @@ struct StepView: View {
                                        "설마 지금 뛰고있는건 아니죠?",
                                        "혹시 육상선수세요?",
                                        "부정행위를 의심케 할 정도로 멀리 왔어요!"]
+    // 다양한 글귀 추가, 첫 걸음 전에 안내 문구 추가
     
     var body: some View {
         
@@ -131,7 +135,11 @@ struct StepView: View {
                 
                 
                 switch stepsCount {
-                case 0...100:
+                case 0...20:
+                    Text(firstText)
+                        .foregroundColor(Color(hex: "D8D8D8"))
+                        .font(.custom("esamanruOTFLight", size: 15))
+                case 21...100:
                     Text(StringList[Int.random(in: 0...2)])
                         .foregroundColor(Color(hex: "D8D8D8"))
                         .font(.custom("esamanruOTFLight", size: 15))
