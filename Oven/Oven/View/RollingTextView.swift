@@ -4,7 +4,7 @@ struct RollingText: View {
     // MARK: Text Properties
     var font: Font = .custom("esamanruOTFLight", size: 35)
     var weight: Font.Weight = . regular
-    // MARK: Animation propertiesd
+    // MARK: Animation properties
     @Binding var value: Int
     @State var animationRange: [Int] = []
     @State private var stepsCount: Int = 0
