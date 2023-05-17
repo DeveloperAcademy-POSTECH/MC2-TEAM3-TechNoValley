@@ -50,6 +50,9 @@ struct HomeView: View {
     
     @State private var isActive = false
     
+    @State private var rectanglePosition: CGPoint = .zero
+
+    
     // Actions
     private var actionSuccess: (() -> Void )?
     
@@ -95,8 +98,12 @@ struct HomeView: View {
                             .frame(width: geometry.size.width * 0.8, height: geometry.size.width * 0.13)
                             .foregroundColor(slideGray)
                         Text("밀어서 5분 쉬기")
+                            .opacity(Double(1-((self.dragOffset.width*2)/self.trackSize.width)))
                             .foregroundColor(Color(hex: "AAAAAA"))
                             .font(.custom("esamanruOTFLight", size: 20))
+                       
+                        
+                            
                     }
 
                     
@@ -107,7 +114,9 @@ struct HomeView: View {
                         .offset(x: getDragOffsetX(), y: 0)
                         .gesture(
                             DragGesture()
-                                .onChanged({ value in self.handleDragChanged(value) })
+                                .onChanged({ value in self.handleDragChanged(value)
+                                    
+                                })
                                 .onEnded({ value in
                                     self.handleDragEnded()
                                     if value.translation.width > 100 { // Replace with your own threshold value
