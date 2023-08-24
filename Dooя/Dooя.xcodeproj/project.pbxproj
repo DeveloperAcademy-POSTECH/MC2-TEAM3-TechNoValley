@@ -169,6 +169,15 @@
 			path = Class;
 			sourceTree = "<group>";
 		};
+		03D87E162A9793D500E16BB2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F3F057CB2A0CC35200F3715C /* Logo.json */,
+				03FB63032A056A5F000E94A6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		03FB62F32A056A5E000E94A6 = {
 			isa = PBXGroup;
 			children = (
@@ -194,13 +203,12 @@
 			children = (
 				032D579A2A0CBC4F0091E1A5 /* Info.plist */,
 				03FB62FF2A056A5E000E94A6 /* DooяApp.swift */,
-				F3F057CB2A0CC35200F3715C /* Logo.json */,
 				032D57B12A10AAA60091E1A5 /* View */,
 				032D57B02A10AA790091E1A5 /* OnboardingView */,
 				032D57B22A10AC5E0091E1A5 /* Class */,
 				032D57AF2A10AA690091E1A5 /* Model */,
 				032D57972A0CBA570091E1A5 /* Fonts */,
-				03FB63032A056A5F000E94A6 /* Assets.xcassets */,
+				03D87E162A9793D500E16BB2 /* Resources */,
 				03FB63052A056A5F000E94A6 /* Preview Content */,
 			);
 			path = "Dooя";
