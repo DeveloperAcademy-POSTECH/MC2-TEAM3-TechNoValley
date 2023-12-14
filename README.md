@@ -1,41 +1,44 @@
-> 치매 환자 보호자를 위한 복지 혜택 도우미, 온봄
+
+![Door_Icon](https://github.com/DeveloperAcademy-POSTECH/MC2-TEAM3-TechNoValley/assets/100858136/64090220-6ec1-4092-b571-765aa740afbc)<svg width="600" height="200" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="600" height="200" fill="#252526"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M372.5 128.5H377.5V71.5H372.5V128.5Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M303.5 128.5H337.5V71.5H303.5V128.5ZM309.145 122.865H331.853V77.1345H309.145V122.865Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M261.5 128.5H295.5V71.5H261.5V128.5ZM267.145 122.865H289.853V77.1345H267.145V122.865Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M222.5 71.5V128.5H227.5V122.865V77.1345V71.5H222.5Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M233.5 71.5V77.1345H250.031V122.865H233.5V128.5H255.5V71.5H233.5Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M342.5 71.5V76.5H348.474H372.5V71.5H342.5Z" fill="#FFBC00"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M342.5 82.5V92.0553V97.7228H348.474H366.495L342.5 120.485V128.5L372.5 100.04V97.7228V92.0553H348.474V82.5H342.5Z" fill="#FFBC00"/>
+</svg>
+
+> 랜덤 산책 방향을 제시해, 5분간의 휴식을 할 수 있게 돕는 앱, Dooя
 
 ## 👏 Introduction
 
-치매는 80세 이상이라면 5명 중에 1명 꼴로 발생하는 흔한 질병이지만, 복합적인 부담을 가지고 있습니다.
-경제적 부담도 존재하며, 5년에서 20년 동안 보호자가 하루에 9시간 함께 해야 합니다. 
-혼자 견딜 수 없으니 요양보호사가 필요하죠. 하지만 요양보호사를 하루 9시간, 주에 5번을 고용하려면 
-최소 월 500만원 정도 듭니다. 그래서 복지가 필요한 거죠.
+해야 할 일들은 많고, 여기서 쉬면 나만 뒤쳐지는 것 같고.. 현대인들에게 쉼이란 사치에 가까울 지도 모르겠어요. <br>
+하지만, 잠깐 5분이라도 집중하던 것에서 벗어나보는 게 어떨까요? 잠깐 휴식하고 나면 머리가 맑아지고 다시 집중할 수 있을 거에요.<br>
+잘 휴식하지 못하는 당신을 위해서 랜덤 방향을 제시해 드릴게요! Dooя와 함께 5분간의 산책을 해 보시는 건 어떤가요?
 
-대표적인 복지 혜택으로는 장기요양보험이 있습니다. 하지만 이것을 신청하는 과정도 쉽지 않습니다. 
-이 제도는 요양보호사 비용의 85%를 지원하는 것 이외에도 여러가지 혜택을 받을 수 있는, 
-치매 환자 보호자라면 반드시 신청해야 하는 주요한 복지 혜택 중에 하나인데요, 
-신청하는 절차가 굉장히 복잡합니다. 어려운 용어, 헷갈리는 설명 때문에 혼자 작성하기는 쉽지 않지 않은데요,
-방문 신청을 하려고 해도 환자를 두고 신청하러 가기란 굉장히 어렵고 부담스러운 일입니다. 
-
-이러한 문제를 해결하기 위해, 온봄은 환자 보호자가 집에서도 간편하게 장기요양보험을 신청할 수 있도록 절차를 간소화했습니다. 
 
 ## 📱 APP Preview
+|![Home view](https://github.com/DeveloperAcademy-POSTECH/MC2-TEAM3-TechNoValley/assets/100858136/b8513d90-35ad-4d73-9eb6-4d8c57480c25)|![compass 미야](https://github.com/DeveloperAcademy-POSTECH/MC2-TEAM3-TechNoValley/assets/100858136/4958aa3c-db28-4152-bbd7-cf58b6b5b1bc)|![step view](https://github.com/DeveloperAcademy-POSTECH/MC2-TEAM3-TechNoValley/assets/100858136/92ade54c-6b86-459f-a1eb-9e81a2059059)|![inhale view1 토마토](https://github.com/DeveloperAcademy-POSTECH/MC2-TEAM3-TechNoValley/assets/100858136/60cfc238-a36b-4514-bb98-5014eca3a526)|
+|:-:|:-:|:-:|:-:|
 
-|![Simulator Screenshot - iPhone 14 - 2023-12-12 at 20 35](https://github.com/DeveloperAcademy-POSTECH/MacC-Team2-Nutty/assets/100858136/033cb219-d38b-431f-a91e-9487bf4d29e4)|![Simulator Screenshot - iPhone 14 - 2023-12-12 at 20 36](https://github.com/DeveloperAcademy-POSTECH/MacC-Team2-Nutty/assets/100858136/b32d8b42-2c19-40f4-9436-62373902cd8e)|![Group 4](https://github.com/DeveloperAcademy-POSTECH/MacC-Team2-Nutty/assets/100858136/1783dc2a-2353-404a-a308-5b81c857b526)|
-|:-:|:-:|:-:|
-![Simulator Screenshot - iPhone 14 - 2023-12-12 at 20 41](https://github.com/DeveloperAcademy-POSTECH/MacC-Team2-Nutty/assets/100858136/09842854-a77d-4564-a021-5fe07a6f5b01)|![Simulator Screenshot - iPhone 14 - 2023-12-12 at 20 41-1](https://github.com/DeveloperAcademy-POSTECH/MacC-Team2-Nutty/assets/100858136/c874d5d5-8aa9-492e-aeda-e7902b74ce55)
+
 
 ## 👫 Team Member
-
-|[권세빈(Biny)](https://github.com/SeBin-Kwon)|[금가경(Miya)](https://github.com/JJunghyunY)|[문희찬(Eren)](https://github.com/mun9769)|[유정현(Junyoo)](https://github.com/JJunghyunY)|
-|:-:|:-:|:-:|:-:|
-|Developer|Developer|Developer|Developer|
-|김수호(Guardy)|박세빈(Binu)|유지민(Jamie)|
-|PO|Designer|Designer|
+|금가경(Miya)|김동혁(Hayo)|김석현(Surgeon)|
+|:-:|:-:|:-:|
+|Developer|Developer|Designer|
+|https://github.com/ge-um|https://github.com/hyeok3013|www.linkedin.com/in/seok-hyeon-kim-45022228b|
+|**김선길(Tomato)**|**이지수(Jigu)**|**하태민(Kori)**|
+|Designer & Developer|PM & Developer|Designer|
+|https://www.linkedin.com/in/sungil-k-4008521b4<br>https://github.com/pscu91|www.linkedin.com/in/jisu-lee-jigu||
 
 ## 🛠️ Development Environment
-![Static Badge](https://img.shields.io/badge/iOS-16.4%2B-lightGray)
-![Static Badge](https://img.shields.io/badge/Xcode-15-blue)
+![Static Badge](https://img.shields.io/badge/iOS-16.2%2B-lightGray)
+![Static Badge](https://img.shields.io/badge/Xcode-14-blue)
 
 ## 🧑‍💻 Tech Skills
 ![Static Badge](https://img.shields.io/badge/swiftUI-red?style=flat-square)
-![Static Badge](https://img.shields.io/badge/PDFKit-green?style=flat-square)
-![Static Badge](https://img.shields.io/badge/Vision-yellow?style=flat-square)
-![Static Badge](https://img.shields.io/badge/AVFoundation-blue?style=flat-square)
-![Static Badge](https://img.shields.io/badge/KakaoPostCodeAPI-lightYellow?style=flat-square)
+![Static Badge](https://img.shields.io/badge/CoreLocation-green?style=flat-square)
+![Static Badge](https://img.shields.io/badge/CoreMotion-yellow?style=flat-square)
